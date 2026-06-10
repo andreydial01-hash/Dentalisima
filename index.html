@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A3D91" />
+
+  <!-- ====================== SEO ====================== -->
+  <title>Dentalisima | Odontología estética e implantes de excelencia</title>
+  <meta name="description" content="Clínica dental premium especializada en odontología estética, implantes, ortodoncia, diseño de sonrisa y salud dental integral. Tecnología avanzada y atención personalizada. Agenda tu consulta." />
+  <meta name="keywords" content="clínica dental, dentista, implantes dentales, ortodoncia, diseño de sonrisa, blanqueamiento dental, odontología estética" />
+  <meta name="author" content="Dentalisima" />
+  <link rel="canonical" href="https://www.dentalisima.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dentalisima | Sonrisas que transforman vidas" />
+  <meta property="og:description" content="Especialistas en odontología estética, implantes, ortodoncia y salud dental integral. Atención de excelencia con tecnología de última generación." />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:url" content="https://www.dentalisima.com/" />
+
+  <!-- Fuentes: precarga eficiente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" />
+
+  <!-- Datos estructurados para SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentalisima",
+    "description": "Clínica dental premium especializada en odontología estética, implantes, ortodoncia y salud dental integral.",
+    "image": "https://www.dentalisima.com/og.jpg",
+    "url": "https://www.dentalisima.com/",
+    "telephone": "+52 55 5555 5555",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. de la Sonrisa 123, Piso 4",
+      "addressLocality": "Ciudad de México",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1280" }
+  }
+  </script>
+
+  <style>
+  /* =========================================================
+     DENTALISIMA — Sistema de diseño
+     ========================================================= */
+  :root{
+    /* Marca */
+    --blue:        #0D6EFD;
+    --blue-dark:   #0A3D91;
+    --white:       #FFFFFF;
+    --gray-100:    #F8F9FA;
+    --gray-200:    #E9ECEF;
+
+    /* Derivados */
+    --ink:         #0A1F44;   /* texto principal */
+    --muted:       #51607A;   /* texto secundario (AA sobre blanco) */
+    --line:        #E4EAF2;   /* bordes suaves */
+    --fresh:       #2FC6C0;   /* acento mentolado, frescura dental */
+    --star:        #F6B73C;   /* estrellas */
+    --whatsapp:    #25D366;
+
+    /* Glass */
+    --glass:       rgba(255,255,255,.65);
+    --glass-strong:rgba(255,255,255,.82);
+    --glass-brd:   rgba(255,255,255,.7);
+
+    /* Sombras (limpias, médicas) */
+    --sh-sm:  0 2px 8px rgba(10,61,145,.06);
+    --sh-md:  0 14px 40px rgba(10,61,145,.10);
+    --sh-lg:  0 30px 70px rgba(10,61,145,.16);
+    --sh-blue:0 18px 40px rgba(13,110,253,.32);
+
+    /* Radios */
+    --r-sm: 14px;
+    --r-md: 22px;
+    --r-lg: 30px;
+    --r-xl: 40px;
+
+    /* Tipografía */
+    --display: "Fraunces", Georgia, serif;
+    --body:    "Manrope", system-ui, sans-serif;
+
+    /* Layout */
+    --maxw: 1200px;
+    --gutter: clamp(1.2rem, 4vw, 3rem);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    font-size:clamp(1rem,.96rem + .2vw,1.075rem);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body.is-locked{ overflow:hidden; }
+
+  h1,h2,h3,h4{ font-family:var(--display); font-weight:600; line-height:1.08; letter-spacing:-.02em; color:var(--ink); }
+  a{ color:inherit; text-decoration:none; }
+  img,svg{ display:block; max-width:100%; }
+  ul{ list-style:none; }
+
+  /* Atmósfera de fondo: malla azul muy sutil */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+    background:
+      radial-gradient(60vw 60vw at 12% -8%, rgba(13,110,253,.10), transparent 60%),
+      radial-gradient(50vw 50vw at 100% 8%, rgba(47,198,192,.08), transparent 55%),
+      radial-gradient(60vw 60vw at 80% 100%, rgba(10,61,145,.07), transparent 60%);
+  }
+
+  /* ------------ Utilidades de layout ------------ */
+  .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+  .section{ padding-block:clamp(4.5rem,9vw,7.5rem); position:relative; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.55rem;
+    font-family:var(--body); font-weight:700; font-size:.74rem;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--blue);
+  }
+  .eyebrow::before{ content:""; width:26px; height:2px; background:linear-gradient(90deg,var(--blue),var(--fresh)); border-radius:2px; }
+  .section-head{ max-width:660px; margin-bottom:clamp(2.5rem,5vw,3.75rem); }
+  .section-head.center{ margin-inline:auto; text-align:center; }
+  .section-head h2{ font-size:clamp(2rem,1.4rem + 2.6vw,3.15rem); margin:.7rem 0 .9rem; }
+  .section-head p{ color:var(--muted); font-size:1.08rem; }
+  .lead{ color:var(--muted); }
+
+  /* ------------ Botones ------------ */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    font-family:var(--body); font-weight:700; font-size:1rem;
+    padding:.95rem 1.7rem; border-radius:999px; border:1px solid transparent;
+    cursor:pointer; transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, background .3s, color .3s;
+    will-change:transform;
+  }
+  .btn svg{ width:1.15em; height:1.15em; }
+  .btn-primary{ background:linear-gradient(135deg,var(--blue),var(--blue-dark)); color:#fff; box-shadow:var(--sh-blue); }
+  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 24px 50px rgba(13,110,253,.42); }
+  .btn-ghost{ background:var(--white); color:var(--blue-dark); border-color:var(--line); box-shadow:var(--sh-sm); }
+  .btn-ghost:hover{ transform:translateY(-3px); border-color:var(--blue); box-shadow:var(--sh-md); }
+  .btn-wa{ background:var(--whatsapp); color:#fff; box-shadow:0 14px 30px rgba(37,211,102,.35); }
+  .btn-wa:hover{ transform:translateY(-3px); box-shadow:0 20px 40px rgba(37,211,102,.45); }
+  .btn-light{ background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.3); backdrop-filter:blur(8px); }
+  .btn-light:hover{ background:rgba(255,255,255,.24); transform:translateY(-3px); }
+
+  :where(a,button):focus-visible{ outline:3px solid var(--fresh); outline-offset:3px; border-radius:6px; }
+
+  .skip-link{ position:absolute; left:-999px; top:0; background:var(--blue-dark); color:#fff; padding:.75rem 1.2rem; z-index:1000; border-radius:0 0 10px 0; }
+  .skip-link:focus{ left:0; }
+
+  /* =========================================================
+     SPLASH SCREEN
+     ========================================================= */
+  .splash{
+    position:fixed; inset:0; z-index:900;
+    display:grid; place-items:center; text-align:center;
+    padding:2rem;
+    background:#1F4B70;
+    color:#fff;
+    animation:splashOut .9s ease 2.2s forwards; /* auto-cierre por CSS (resiliencia sin JS) */
+  }
+  .splash::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(55vw 55vw at 50% 28%, rgba(255,255,255,.10), transparent 65%);
+    pointer-events:none;
+  }
+  @keyframes splashOut{ to{ opacity:0; visibility:hidden; pointer-events:none; } }
+  .splash.gone{ display:none; }
+  .splash__inner{ position:relative; max-width:560px; }
+  .splash__logo{ display:inline-flex; align-items:center; gap:.7rem; opacity:0; animation:fadeUp .8s ease .15s forwards; }
+  .splash__logo .mark{ width:54px; height:54px; }
+  .splash__logo .word{ font-family:var(--display); font-weight:600; font-size:2rem; letter-spacing:-.02em; }
+  .splash__msg{ font-family:var(--display); font-size:clamp(1.7rem,1.2rem + 2.4vw,2.8rem); margin:1.6rem 0 .4rem; opacity:0; animation:fadeUp .9s ease .45s forwards; }
+  .splash__sub{ opacity:0; color:rgba(255,255,255,.85); animation:fadeUp .9s ease .65s forwards; }
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(18px);} to{ opacity:1; transform:none; } }
+
+  /* =========================================================
+     HEADER / NAV (glass)
+     ========================================================= */
+  .site-header{ position:sticky; top:0; z-index:120; transition:background .3s, box-shadow .3s; }
+  .site-header.scrolled{ background:var(--glass-strong); backdrop-filter:blur(18px) saturate(140%); box-shadow:0 1px 0 var(--line), var(--sh-sm); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:1rem; }
+  .brand{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--display); font-weight:600; font-size:1.4rem; letter-spacing:-.02em; }
+  .brand .mark{ width:38px; height:38px; }
+  .nav-links{ display:flex; align-items:center; gap:2rem; }
+  .nav-links a{ font-weight:600; font-size:.97rem; color:var(--ink); position:relative; padding-block:.3rem; transition:color .25s; }
+  .nav-links a::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:linear-gradient(90deg,var(--blue),var(--fresh)); border-radius:2px; transition:width .3s; }
+  .nav-links a:hover{ color:var(--blue); }
+  .nav-links a:hover::after{ width:100%; }
+  .nav-actions{ display:flex; align-items:center; gap:.8rem; }
+  .nav-toggle{ display:none; background:none; border:0; cursor:pointer; padding:.4rem; }
+  .nav-toggle span{ display:block; width:26px; height:2.5px; background:var(--ink); border-radius:3px; transition:.3s; }
+  .nav-toggle span+span{ margin-top:6px; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(8.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-8.5px) rotate(-45deg); }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero{ position:relative; padding-block:clamp(3rem,6vw,5.5rem) clamp(4rem,8vw,7rem); }
+  .hero__grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
+  .hero__badge{ display:inline-flex; align-items:center; gap:.6rem; background:var(--white); border:1px solid var(--line); box-shadow:var(--sh-sm); padding:.5rem .95rem; border-radius:999px; font-size:.84rem; font-weight:700; color:var(--blue-dark); }
+  .hero__badge .dot{ width:9px; height:9px; border-radius:50%; background:var(--fresh); box-shadow:0 0 0 4px rgba(47,198,192,.2); }
+  .hero h1{ font-size:clamp(2.5rem,1.7rem + 3.6vw,4.4rem); margin:1.3rem 0 1.1rem; }
+  .hero h1 em{ font-style:italic; color:var(--blue); font-weight:500; }
+  .hero p.lead{ font-size:1.15rem; max-width:33ch; }
+  .hero__cta{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2rem; }
+  .hero__trust{ display:flex; align-items:center; gap:1.4rem; margin-top:2.3rem; flex-wrap:wrap; }
+  .hero__trust .stars{ display:flex; gap:2px; }
+  .hero__trust .stars svg{ width:18px; height:18px; fill:var(--star); }
+  .hero__trust small{ color:var(--muted); font-weight:600; }
+
+  /* Visual del hero: composición glass premium */
+  .hero__visual{ position:relative; }
+  .hero__panel{
+    position:relative; border-radius:var(--r-xl); overflow:hidden;
+    background:linear-gradient(150deg,#0A3D91,#0D6EFD 60%,#21a8c4);
+    box-shadow:var(--sh-lg);
+    aspect-ratio:4/4.4; display:grid; place-items:center;
+    isolation:isolate;
+  }
+  .hero__panel::before{ content:""; position:absolute; inset:0; background:radial-gradient(60% 50% at 30% 20%, rgba(255,255,255,.28), transparent 60%); }
+  .hero__smile{ width:72%; filter:drop-shadow(0 20px 40px rgba(0,0,0,.25)); }
+  .hero__sparkle{ position:absolute; color:#fff; opacity:.9; animation:twinkle 3s ease-in-out infinite; }
+  .hero__sparkle.s1{ top:16%; right:18%; width:34px; }
+  .hero__sparkle.s2{ top:34%; left:14%; width:20px; animation-delay:1s; }
+  .hero__sparkle.s3{ bottom:24%; right:24%; width:24px; animation-delay:.5s; }
+  @keyframes twinkle{ 0%,100%{ transform:scale(.85); opacity:.55; } 50%{ transform:scale(1.1); opacity:1; } }
+
+  .glass-card{
+    position:absolute; background:var(--glass-strong); backdrop-filter:blur(16px) saturate(150%);
+    border:1px solid var(--glass-brd); border-radius:var(--r-md); box-shadow:var(--sh-md);
+    padding:.95rem 1.15rem; display:flex; align-items:center; gap:.8rem;
+  }
+  .glass-card .ic{ width:42px; height:42px; flex:none; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); color:#fff; }
+  .glass-card .ic svg{ width:22px; height:22px; }
+  .glass-card .n{ font-family:var(--display); font-weight:600; font-size:1.4rem; line-height:1; color:var(--ink); }
+  .glass-card .l{ font-size:.78rem; color:var(--muted); font-weight:600; }
+  @keyframes floaty{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  /* =========================================================
+     LOGOS / CONFIANZA STRIP
+     ========================================================= */
+  .trust-strip{ border-block:1px solid var(--line); background:var(--glass); }
+  .trust-strip .row{ display:flex; flex-wrap:wrap; gap:1rem 2.6rem; align-items:center; justify-content:center; padding-block:1.5rem; color:var(--muted); font-weight:700; font-size:.86rem; letter-spacing:.04em; }
+  .trust-strip .row span{ display:inline-flex; align-items:center; gap:.5rem; }
+  .trust-strip svg{ width:18px; height:18px; color:var(--fresh); }
+
+  /* =========================================================
+     SERVICIOS
+     ========================================================= */
+  .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+  .card{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg);
+    padding:2rem 1.85rem; box-shadow:var(--sh-sm);
+    transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .4s;
+    position:relative; overflow:hidden;
+  }
+  .card::after{ content:""; position:absolute; inset:auto 0 0 0; height:3px; background:linear-gradient(90deg,var(--blue),var(--fresh)); transform:scaleX(0); transform-origin:left; transition:transform .45s; }
+  .card:hover{ transform:translateY(-8px); box-shadow:var(--sh-lg); border-color:transparent; }
+  .card:hover::after{ transform:scaleX(1); }
+  .card h3{ font-size:1.3rem; margin-bottom:.5rem; }
+  .card p{ color:var(--muted); font-size:.98rem; }
+
+  /* =========================================================
+     BENEFICIOS (oscuro)
+     ========================================================= */
+  .benefits{ background:linear-gradient(160deg,#08234f,#0A3D91 55%,#0d4ea8); color:#fff; border-radius:clamp(28px,5vw,48px); overflow:hidden; position:relative; }
+  .benefits::before{ content:""; position:absolute; inset:0; background:radial-gradient(40% 60% at 85% 10%, rgba(47,198,192,.22), transparent 60%); pointer-events:none; }
+  .benefits .inner{ padding:clamp(3rem,6vw,5rem) var(--gutter); position:relative; }
+  .benefits .eyebrow{ color:#7fd9ff; }
+  .benefits .eyebrow::before{ background:linear-gradient(90deg,#7fd9ff,var(--fresh)); }
+  .benefits h2{ color:#fff; font-size:clamp(2rem,1.4rem + 2.4vw,3rem); max-width:18ch; }
+  .metrics{ display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; margin:3rem 0; }
+  .metric .num{ font-family:var(--display); font-weight:600; font-size:clamp(2.4rem,1.6rem + 2.5vw,3.6rem); line-height:1; background:linear-gradient(120deg,#fff,#9fe0ff); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .metric .lab{ margin-top:.5rem; color:rgba(255,255,255,.78); font-weight:600; font-size:.95rem; }
+  .benefit-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem 2rem; }
+  .benefit-list li{ display:flex; gap:.85rem; align-items:flex-start; color:rgba(255,255,255,.92); font-weight:600; }
+  .benefit-list .check{ flex:none; width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:rgba(47,198,192,.25); color:var(--fresh); }
+  .benefit-list .check svg{ width:15px; height:15px; }
+
+  /* =========================================================
+     GALERÍA (masonry antes/después)
+     ========================================================= */
+  .masonry{ columns:3; column-gap:1.4rem; }
+  .masonry .ga{ break-inside:avoid; margin-bottom:1.4rem; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--sh-md); position:relative; background:var(--gray-100); }
+  .masonry .ga img, .masonry .ga svg.smile{ width:100%; display:block; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
+  .masonry .ga:hover img, .masonry .ga:hover svg.smile{ transform:scale(1.06); }
+  .masonry .ga .pair{ display:grid; grid-template-columns:1fr 1fr; }
+  .masonry .ga .half{ position:relative; aspect-ratio:1/1; display:grid; place-items:center; }
+  .masonry .ga .half.before{ background:linear-gradient(160deg,#eef1f5,#dfe5ee); }
+  .masonry .ga .half.after{ background:linear-gradient(160deg,#0d6efd,#0A3D91); }
+  .masonry .ga .badge{ position:absolute; top:.6rem; left:.6rem; font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:.3rem .6rem; border-radius:999px; }
+  .masonry .ga .badge.b1{ background:#fff; color:var(--muted); box-shadow:var(--sh-sm); }
+  .masonry .ga .badge.b2{ background:var(--fresh); color:#063a38; }
+  .masonry .ga .cap{ position:absolute; inset:auto 0 0 0; padding:1.4rem .9rem .8rem; background:linear-gradient(transparent,rgba(10,31,68,.78)); color:#fff; font-weight:700; font-size:.88rem; }
+  .masonry .ga .half svg{ width:78%; }
+  .masonry .ga.tall .pair .half{ aspect-ratio:1/1.35; }
+
+  /* =========================================================
+     TESTIMONIOS (slider)
+     ========================================================= */
+  .testi{ background:var(--gray-100); }
+  .testi__viewport{ overflow:hidden; }
+  .testi__track{ display:flex; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
+  .testi__slide{ flex:0 0 100%; padding:.4rem; }
+  .testi__card{ background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg); padding:clamp(2rem,4vw,3.4rem); box-shadow:var(--sh-md); max-width:820px; margin-inline:auto; text-align:center; }
+  .testi__stars{ display:inline-flex; gap:3px; margin-bottom:1.3rem; }
+  .testi__stars svg{ width:22px; height:22px; fill:var(--star); }
+  .testi__quote{ font-family:var(--display); font-size:clamp(1.25rem,1rem + 1.2vw,1.8rem); line-height:1.4; color:var(--ink); }
+  .testi__person{ display:flex; align-items:center; justify-content:center; gap:.9rem; margin-top:1.8rem; }
+  .testi__avatar{ width:54px; height:54px; border-radius:50%; display:grid; place-items:center; font-family:var(--display); font-weight:600; color:#fff; font-size:1.25rem; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); }
+  .testi__name{ font-weight:800; }
+  .testi__role{ color:var(--muted); font-size:.86rem; font-weight:600; }
+  .testi__nav{ display:flex; align-items:center; justify-content:center; gap:1.2rem; margin-top:2rem; }
+  .testi__arrow{ width:50px; height:50px; border-radius:50%; border:1px solid var(--line); background:#fff; display:grid; place-items:center; cursor:pointer; box-shadow:var(--sh-sm); transition:.3s; color:var(--blue-dark); }
+  .testi__arrow:hover{ background:var(--blue); color:#fff; transform:scale(1.06); }
+  .testi__dots{ display:flex; gap:.5rem; }
+  .testi__dots button{ width:10px; height:10px; border-radius:50%; border:0; background:var(--gray-200); cursor:pointer; transition:.3s; }
+  .testi__dots button.active{ background:var(--blue); width:28px; border-radius:999px; }
+
+  /* =========================================================
+     RESERVACIÓN / CALENDARIO
+     ========================================================= */
+  .booking__grid{ display:grid; grid-template-columns:1fr 1.05fr; gap:clamp(2rem,5vw,3.5rem); align-items:center; }
+  .booking__copy h2{ font-size:clamp(2rem,1.4rem + 2.6vw,3.1rem); margin:.7rem 0 1rem; }
+  .booking__copy ul{ display:grid; gap:.85rem; margin:1.6rem 0 2rem; }
+  .booking__copy li{ display:flex; gap:.75rem; align-items:center; color:var(--muted); font-weight:600; }
+  .booking__copy li .ic{ width:34px; height:34px; flex:none; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,rgba(13,110,253,.12),rgba(47,198,192,.16)); color:var(--blue); }
+  .booking__copy li .ic svg{ width:18px; height:18px; }
+  .integ{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1.4rem; }
+  .integ span{ font-size:.78rem; font-weight:700; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:.4rem .8rem; background:#fff; }
+
+  .scheduler{ background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--sh-lg); padding:clamp(1.5rem,3vw,2.2rem); }
+  .scheduler__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:1.2rem; }
+  .scheduler__top .m{ font-family:var(--display); font-weight:600; font-size:1.25rem; }
+  .scheduler__top .legend{ font-size:.76rem; color:var(--muted); display:inline-flex; align-items:center; gap:.4rem; font-weight:600; }
+  .scheduler__top .legend i{ width:9px; height:9px; border-radius:50%; background:var(--fresh); display:inline-block; }
+  .cal{ display:grid; grid-template-columns:repeat(7,1fr); gap:.4rem; }
+  .cal .dow{ text-align:center; font-size:.72rem; font-weight:800; color:var(--muted); padding-bottom:.4rem; letter-spacing:.04em; }
+  .cal .day{ aspect-ratio:1/1; border:1px solid transparent; border-radius:12px; background:var(--gray-100); color:var(--ink); font-weight:700; font-size:.92rem; cursor:pointer; transition:.25s; }
+  .cal .day.empty{ background:transparent; cursor:default; }
+  .cal .day.muted{ color:#b5bdc9; background:#fbfcfe; cursor:not-allowed; }
+  .cal .day.free{ background:rgba(47,198,192,.12); color:var(--blue-dark); }
+  .cal .day.free::after{ content:""; display:block; width:5px; height:5px; border-radius:50%; background:var(--fresh); margin:.15rem auto 0; }
+  .cal .day:not(.muted):not(.empty):hover{ border-color:var(--blue); transform:translateY(-2px); }
+  .cal .day.sel{ background:linear-gradient(135deg,var(--blue),var(--blue-dark)); color:#fff; box-shadow:var(--sh-blue); }
+  .cal .day.sel::after{ background:#fff; }
+  .slots{ margin-top:1.5rem; }
+  .slots p{ font-weight:800; font-size:.86rem; margin-bottom:.7rem; }
+  .slots .chips{ display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; }
+  .slots .chip{ border:1px solid var(--line); background:#fff; border-radius:10px; padding:.6rem .2rem; font-weight:700; font-size:.86rem; cursor:pointer; transition:.25s; color:var(--ink); }
+  .slots .chip:hover{ border-color:var(--blue); color:var(--blue); }
+  .slots .chip.sel{ background:var(--blue); color:#fff; border-color:var(--blue); }
+  .scheduler .summary{ margin-top:1.4rem; font-size:.9rem; color:var(--muted); font-weight:600; min-height:1.2em; }
+  .scheduler .summary b{ color:var(--blue-dark); }
+  .scheduler .btn{ width:100%; margin-top:1rem; }
+
+  /* =========================================================
+     CTA FINAL
+     ========================================================= */
+  .cta-final{ position:relative; text-align:center; color:#fff; border-radius:clamp(28px,5vw,48px); overflow:hidden; background:linear-gradient(140deg,#0A3D91,#0D6EFD 60%,#23a6c2); padding:clamp(3.5rem,7vw,6rem) var(--gutter); }
+  .cta-final::before{ content:""; position:absolute; inset:0; background:radial-gradient(50% 60% at 50% 0%, rgba(255,255,255,.2), transparent 60%); }
+  .cta-final .inner{ position:relative; max-width:720px; margin-inline:auto; }
+  .cta-final h2{ color:#fff; font-size:clamp(2rem,1.4rem + 2.8vw,3.4rem); }
+  .cta-final p{ color:rgba(255,255,255,.88); margin:1rem auto 2rem; max-width:46ch; }
+  .cta-final .row{ display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  .footer{ background:#06183a; color:#cfd8e8; padding-block:clamp(3rem,6vw,4.5rem) 2rem; }
+  .footer__grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1.2fr; gap:2.5rem; }
+  .footer .brand{ color:#fff; margin-bottom:1rem; }
+  .footer p{ color:#9fb0cc; font-size:.95rem; max-width:34ch; }
+  .footer h4{ color:#fff; font-family:var(--body); font-weight:800; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:1.1rem; }
+  .footer ul{ display:grid; gap:.7rem; }
+  .footer a{ color:#9fb0cc; transition:.25s; font-size:.95rem; }
+  .footer a:hover{ color:#fff; }
+  .footer .socials{ display:flex; gap:.7rem; margin-top:1.2rem; }
+  .footer .socials a{ width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.08); transition:.3s; }
+  .footer .socials a:hover{ background:var(--blue); transform:translateY(-3px); }
+  .footer .socials svg{ width:18px; height:18px; }
+  .footer__bottom{ margin-top:3rem; padding-top:1.6rem; border-top:1px solid rgba(255,255,255,.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:.85rem; color:#7f93b5; }
+  .footer__bottom a{ font-size:.85rem; }
+
+  /* =========================================================
+     WHATSAPP FLOTANTE
+     ========================================================= */
+  .wa-float{ position:fixed; right:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem); z-index:200; width:62px; height:62px; border-radius:50%; background:var(--whatsapp); display:grid; place-items:center; box-shadow:0 12px 30px rgba(37,211,102,.45); transition:transform .3s; }
+  .wa-float:hover{ transform:scale(1.08); }
+  .wa-float svg{ width:32px; height:32px; }
+  .wa-float::before{ content:""; position:absolute; inset:0; border-radius:50%; background:var(--whatsapp); animation:pulse 2.4s ease-out infinite; z-index:-1; }
+  @keyframes pulse{ 0%{ transform:scale(1); opacity:.6; } 100%{ transform:scale(1.9); opacity:0; } }
+
+  /* =========================================================
+     SCROLL REVEAL
+     ========================================================= */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal[data-d="1"]{ transition-delay:.1s; }
+  .reveal[data-d="2"]{ transition-delay:.2s; }
+  .reveal[data-d="3"]{ transition-delay:.3s; }
+  .reveal[data-d="4"]{ transition-delay:.4s; }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+  @media (max-width:980px){
+    .hero__grid{ grid-template-columns:1fr; }
+    .hero__visual{ max-width:460px; margin-inline:auto; }
+    .booking__grid{ grid-template-columns:1fr; }
+    .metrics{ grid-template-columns:repeat(2,1fr); gap:2rem 1rem; }
+    .footer__grid{ grid-template-columns:1fr 1fr; gap:2rem; }
+  }
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed; inset:0 0 0 auto; width:min(80vw,320px);
+      flex-direction:column; align-items:flex-start; justify-content:center; gap:1.6rem;
+      background:var(--glass-strong); backdrop-filter:blur(22px); padding:2rem;
+      transform:translateX(105%); transition:transform .4s cubic-bezier(.2,.8,.2,1); box-shadow:var(--sh-lg);
+    }
+    .nav-links.open{ transform:none; }
+    .nav-toggle{ display:block; z-index:130; }
+    .nav-actions .btn-desktop{ display:none; }
+    .cards{ grid-template-columns:1fr; }
+    .masonry{ columns:2; }
+    .benefit-list{ grid-template-columns:1fr; }
+    .slots .chips{ grid-template-columns:repeat(3,1fr); }
+    .footer__grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:460px){
+    .masonry{ columns:1; }
+    .metrics{ grid-template-columns:repeat(2,1fr); }
+    .hero__card-1, .hero__card-2{ position:relative; inset:auto; margin:.6rem auto 0; width:max-content; animation:none; }
+  }
+
+  /* Accesibilidad: respeta reduce-motion */
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+    .reveal{ opacity:1; transform:none; }
+    .splash{ animation:none; }
+  }
+
+  /* ─── LOGOS REALES: identidad visual Dentalisima respetada al 100% ─── */
+
+  /* Mark: estilo "app icon" rounded-square — consistente con la marca */
+  .mark{
+    border-radius:22%;
+    object-fit:cover;
+    flex:none;
+    display:block;
+    box-shadow:0 4px 16px rgba(10,61,145,.28);
+    transition:transform .35s;
+  }
+
+  /* Splash: logo grande, centrado, impactante */
+  .splash-mark{
+    width:132px!important; height:132px!important;
+    border-radius:36px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45), 0 0 0 4px rgba(255,255,255,.18);
+  }
+  /* Organización vertical del splash logo */
+  .splash__logo{ flex-direction:column; gap:1.2rem; align-items:center; }
+  .splash__logo .word{ font-size:2.6rem; letter-spacing:-.02em; }
+
+  /* Hero panel: logo full-bleed como protagonista visual */
+  .hero__logo-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:0;
+    z-index:0;
+    transition:transform .8s cubic-bezier(.2,.8,.2,1);
+  }
+  .hero__panel:hover .hero__logo-img{ transform:scale(1.04); }
+  /* Overlay suave sobre el logo para que los sparkles destaquen */
+  .hero__panel::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(150deg, rgba(10,61,145,.18) 0%, rgba(13,110,253,.12) 60%, transparent 100%);
+    z-index:1;
+    pointer-events:none;
+  }
+  /* Sparkles y tarjetas por encima */
+  .hero__sparkle{ z-index:2; }
+
+  /* Nav: logo pequeño, borde suave */
+  .nav .brand .mark{ width:44px; height:44px; border-radius:14px; box-shadow:0 2px 10px rgba(10,61,145,.2); }
+  .nav .brand:hover .mark{ transform:scale(1.06); }
+
+  /* Footer: logo con borde blanco sutil para destacar sobre fondo oscuro */
+  .footer .brand .mark{
+    width:50px; height:50px; border-radius:14px;
+    box-shadow:0 0 0 2px rgba(255,255,255,.18), 0 6px 20px rgba(0,0,0,.35);
+  }
+
+  /* ──────────────── Selector de idioma ──────────────── */
+  .lang{ position:relative; }
+  .lang__btn{
+    display:inline-flex; align-items:center; gap:.45rem;
+    background:var(--white); border:1px solid var(--line);
+    border-radius:999px; padding:.42rem .75rem .42rem .5rem;
+    font-family:var(--body); font-weight:700; font-size:.85rem;
+    color:var(--ink); cursor:pointer; transition:.25s; box-shadow:var(--sh-sm);
+  }
+  .lang__btn:hover{ border-color:var(--blue); transform:translateY(-1px); }
+  .lang__btn[aria-expanded="true"]{ border-color:var(--blue); box-shadow:var(--sh-md); }
+  .lang__flag{ width:22px; height:14px; border-radius:3px; overflow:hidden; display:block; box-shadow:0 0 0 1px rgba(10,31,68,.08); flex:none; }
+  .lang__flag svg{ width:100%; height:100%; display:block; }
+  .lang__code{ letter-spacing:.05em; }
+  .lang__caret{ width:12px; height:12px; transition:transform .3s; opacity:.6; }
+  .lang__btn[aria-expanded="true"] .lang__caret{ transform:rotate(180deg); }
+
+  .lang__menu{
+    position:absolute; top:calc(100% + .55rem); right:0;
+    background:var(--glass-strong); backdrop-filter:blur(20px) saturate(150%);
+    border:1px solid var(--line); border-radius:18px;
+    box-shadow:var(--sh-lg); padding:.4rem;
+    min-width:190px; z-index:130;
+    opacity:0; transform:translateY(-8px) scale(.96);
+    transform-origin:top right; pointer-events:none;
+    transition:opacity .25s, transform .25s;
+  }
+  .lang__menu[data-open="true"]{ opacity:1; transform:none; pointer-events:auto; }
+  .lang__option{
+    display:flex; align-items:center; gap:.7rem; width:100%;
+    padding:.55rem .7rem; border:0; background:transparent;
+    border-radius:12px; font-family:var(--body); font-weight:600; font-size:.92rem;
+    color:var(--ink); cursor:pointer; text-align:left; transition:.2s;
+  }
+  .lang__option:hover{ background:rgba(13,110,253,.08); }
+  .lang__option[aria-current="true"]{ background:linear-gradient(135deg,rgba(13,110,253,.12),rgba(47,198,192,.12)); color:var(--blue-dark); }
+  .lang__option[aria-current="true"]::after{
+    content:""; width:7px; height:7px; border-radius:50%; background:var(--fresh); margin-left:auto;
+  }
+  @media (max-width:760px){
+    .lang__btn{ padding:.4rem .55rem; }
+    .lang__code, .lang__caret{ display:none; }
+    .lang__menu{ right:auto; left:0; transform-origin:top left; }
+  }
+
+  /* ─── SELECTOR DE IDIOMA ─── */
+  .lang-switch{ position:relative; }
+  .lang-btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    background:var(--white); border:1px solid var(--line);
+    border-radius:999px; padding:.42rem .8rem .42rem .5rem;
+    cursor:pointer; font-family:var(--body); font-weight:700; font-size:.86rem;
+    color:var(--ink); box-shadow:var(--sh-sm); transition:.25s;
+  }
+  .lang-btn:hover{ border-color:var(--blue); transform:translateY(-1px); box-shadow:var(--sh-md); }
+  .lang-flag{
+    width:24px; height:16px; border-radius:3px; overflow:hidden; display:block;
+    box-shadow:0 1px 2px rgba(0,0,0,.18); flex:none;
+  }
+  .lang-flag svg{ width:100%; height:100%; display:block; }
+  .lang-chev{ width:13px; height:13px; opacity:.55; transition:transform .3s; }
+  .lang-btn[aria-expanded="true"] .lang-chev{ transform:rotate(180deg); }
+
+  .lang-menu{
+    position:absolute; top:calc(100% + 10px); right:0;
+    min-width:180px; list-style:none; margin:0; padding:.35rem;
+    background:var(--white); border:1px solid var(--line); border-radius:16px;
+    box-shadow:var(--sh-lg);
+    opacity:0; transform:translateY(-8px); pointer-events:none;
+    transition:opacity .25s ease, transform .25s cubic-bezier(.2,.8,.2,1);
+    z-index:150;
+  }
+  .lang-menu.open{ opacity:1; transform:none; pointer-events:auto; }
+  .lang-opt{
+    display:flex; align-items:center; gap:.65rem; width:100%; text-align:left;
+    background:none; border:0; padding:.55rem .7rem; border-radius:10px;
+    cursor:pointer; font-family:var(--body); font-weight:600; font-size:.92rem;
+    color:var(--ink); transition:background .2s, color .2s;
+  }
+  .lang-opt:hover{ background:var(--gray-100); }
+  .lang-opt.active{ background:rgba(13,110,253,.09); color:var(--blue); }
+  .lang-opt .lang-flag{ width:22px; height:15px; }
+  @media (max-width:760px){ .lang-menu{ right:0; left:auto; } }
+
+  /* ─── SELECTOR DE IDIOMA ─────────────────────────────────────── */
+  .lang-switcher{ position:relative; }
+  .lang-trigger{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.5rem .75rem .5rem .55rem;
+    background:rgba(255,255,255,.92);
+    border:1px solid var(--line);
+    border-radius:999px;
+    cursor:pointer;
+    font-family:var(--body); font-weight:700; font-size:.85rem;
+    color:var(--ink); transition:border-color .25s, box-shadow .25s, transform .25s;
+  }
+  .lang-trigger:hover{ border-color:var(--blue); box-shadow:var(--sh-sm); }
+  .lang-trigger:active{ transform:scale(.97); }
+  .lang-trigger .flag{
+    width:22px; height:15px; border-radius:3px; overflow:hidden;
+    display:block; flex:none;
+    box-shadow:0 0 0 1px rgba(0,0,0,.08);
+  }
+  .lang-trigger .flag svg{ display:block; width:100%; height:100%; }
+  .lang-trigger .chevron{ width:14px; height:14px; color:var(--muted); transition:transform .3s; }
+  .lang-switcher.open .lang-trigger .chevron{ transform:rotate(180deg); }
+
+  .lang-menu{
+    position:absolute; top:calc(100% + .55rem); right:0;
+    list-style:none; padding:.4rem;
+    background:var(--white); border:1px solid var(--line);
+    border-radius:16px; box-shadow:var(--sh-md);
+    min-width:190px; z-index:140;
+    opacity:0; transform:translateY(-8px); pointer-events:none;
+    transition:opacity .25s, transform .25s;
+  }
+  .lang-switcher.open .lang-menu{ opacity:1; transform:none; pointer-events:auto; }
+  .lang-menu li{ list-style:none; }
+  .lang-menu button{
+    display:flex; align-items:center; gap:.75rem; width:100%;
+    background:none; border:0; padding:.6rem .8rem;
+    border-radius:10px; cursor:pointer;
+    font-family:var(--body); font-weight:600; font-size:.92rem;
+    color:var(--ink); text-align:left; transition:background .2s;
+  }
+  .lang-menu button:hover{ background:var(--gray-100); }
+  .lang-menu button.active{ background:rgba(13,110,253,.08); color:var(--blue-dark); }
+  .lang-menu .flag{
+    width:24px; height:16px; border-radius:3px; overflow:hidden;
+    flex:none; box-shadow:0 0 0 1px rgba(0,0,0,.08);
+  }
+  .lang-menu .flag svg{ display:block; width:100%; height:100%; }
+  .lang-menu .lang-name{ flex:1; }
+
+  /* Posición en navbar */
+  .nav-actions{ position:relative; }
+
+  /* Mobile: el menú aparece hacia la izquierda y mantenemos solo bandera+chevron */
+  @media (max-width:760px){
+    .lang-trigger{ padding:.5rem .55rem; }
+    .lang-trigger .code{ display:none; }
+    .lang-menu{ right:-10px; min-width:170px; }
+  }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===================== SPLASH ===================== -->
+  <div class="splash" id="splash" role="dialog" aria-label="Bienvenida a Dentalisima">
+    <div class="splash__inner">
+      <div class="splash__logo">
+        <img src="data:image/jpeg;base64,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" class="mark splash-mark" alt="Logo Dentalisima" width="108" height="108" loading="eager" />
+        <span class="word">Dentalisima</span>
+      </div>
+      <p class="splash__msg" data-i18n="splash.tagline">Diseñamos sonrisas que transforman vidas.</p>
+      <p class="splash__sub" data-i18n="splash.subtitle">Odontología premium con tecnología de última generación.</p>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Dentalisima - Inicio">
+        <img src="data:image/jpeg;base64,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" class="mark" alt="Logo Dentalisima" width="44" height="44" loading="eager" />
+        Dentalisima
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#beneficios" data-i18n="nav.benefits">Beneficios</a>
+        <a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a>
+        <a href="#reservar" data-i18n="nav.book">Reservar</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang" id="lang">
+          <button class="lang__btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Cambiar idioma">
+            <span class="lang__flag" id="langFlag" aria-hidden="true"></span>
+            <span class="lang__code" id="langCode">ES</span>
+            <svg class="lang__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang__menu" id="langMenu" role="listbox" data-open="false"></div>
+        </div>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-trigger" id="langTrigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <span class="flag" id="langFlag"><svg viewBox="0 0 24 16" preserveAspectRatio="none"><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/></svg></span>
+            <span class="code" id="langCode">ES</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="listbox">
+          <li><button role="option" data-lang="es" type="button"><span class="flag"><svg viewBox="0 0 24 16" preserveAspectRatio="none"><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/></svg></span><span class="lang-name">Español</span></button></li>
+          <li><button role="option" data-lang="en" type="button"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="none"><clipPath id="uk_t"><path d="M30,15 h30 v15 z M30,15 v15 h-30 z M30,15 h-30 v-15 z M30,15 v-15 h30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk_t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></svg></span><span class="lang-name">English</span></button></li>
+          <li><button role="option" data-lang="it" type="button"><span class="flag"><svg viewBox="0 0 24 16" preserveAspectRatio="none"><rect width="8" height="16" fill="#008C45"/><rect x="8" width="8" height="16" fill="#F4F5F0"/><rect x="16" width="8" height="16" fill="#CD212A"/></svg></span><span class="lang-name">Italiano</span></button></li>
+          <li><button role="option" data-lang="de" type="button"><span class="flag"><svg viewBox="0 0 24 16" preserveAspectRatio="none"><rect width="24" height="5.33" fill="#000"/><rect y="5.33" width="24" height="5.34" fill="#DD0000"/><rect y="10.67" width="24" height="5.33" fill="#FFCE00"/></svg></span><span class="lang-name">Deutsch</span></button></li>
+          <li><button role="option" data-lang="fr" type="button"><span class="flag"><svg viewBox="0 0 24 16" preserveAspectRatio="none"><rect width="8" height="16" fill="#002395"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg></span><span class="lang-name">Français</span></button></li>
+          </ul>
+        </div>
+        <a href="#reservar" class="btn btn-primary btn-desktop" data-i18n="nav.cta">Agendar cita</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero container" id="inicio">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <span class="hero__badge reveal"><span class="dot"></span> <span data-i18n="hero.badge">Clínica dental premium · Citas disponibles hoy</span></span>
+          <h1 class="reveal" data-d="1" data-i18n="hero.title">Tu sonrisa merece <em>atención de excelencia.</em></h1>
+          <p class="lead reveal" data-d="2" data-i18n="hero.subtitle">Especialistas en odontología estética, implantes, ortodoncia y salud dental integral.</p>
+          <div class="hero__cta reveal" data-d="3">
+            <a href="#reservar" class="btn btn-primary"><span data-i18n="hero.ctaBook">Agendar cita</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="btn btn-wa" data-wa>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.95C.15 5.34 5.5 0 12.06 0a11.82 11.82 0 018.41 3.49 11.82 11.82 0 013.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.69-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.45 1.59 5.45 0 9.89-4.43 9.89-9.88 0-5.46-4.44-9.9-9.89-9.9S2.16 6.49 2.16 11.94c0 2.28.67 3.99 1.79 5.78l-1 3.66 3.65-1.25zm11.39-5.5c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.96c-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.64.07a8.13 8.13 0 01-2.39-1.47 9 9 0 01-1.66-2.06c-.17-.3 0-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41z"/></svg>
+              <span data-i18n="hero.ctaWa">WhatsApp</span>
+            </a>
+          </div>
+          <div class="hero__trust reveal" data-d="4">
+            <div class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
+            </div>
+            <small data-i18n="hero.rating">4.9/5 · +1,280 pacientes satisfechos</small>
+          </div>
+        </div>
+
+        <!-- Visual premium (reemplazable por fotografía real del consultorio) -->
+        <div class="hero__visual reveal" data-d="2">
+          <div class="hero__panel">
+            <svg class="hero__sparkle s1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+            <svg class="hero__sparkle s2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+            <svg class="hero__sparkle s3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+            <img src="data:image/jpeg;base64,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" class="hero__logo-img" alt="Logo Dentalisima — Diseñamos sonrisas que transforman vidas" width="260" height="260" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STRIP CONFIANZA ===================== -->
+    <div class="trust-strip">
+      <div class="container row">
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.8 9.3-9 11-5.2-1.7-9-6-9-11V5z"/></svg> <span data-i18n="trust.1">Esterilización certificada</span></span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.8 9.3-9 11-5.2-1.7-9-6-9-11V5z"/></svg> <span data-i18n="trust.2">Especialistas certificados</span></span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.8 9.3-9 11-5.2-1.7-9-6-9-11V5z"/></svg> <span data-i18n="trust.3">Tecnología digital 3D</span></span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.8 9.3-9 11-5.2-1.7-9-6-9-11V5z"/></svg> <span data-i18n="trust.4">Financiamiento disponible</span></span>
+      </div>
+    </div>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section container" id="servicios">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="services.eyebrow">Nuestros servicios</span>
+        <h2 data-i18n="services.title">Tratamientos integrales para cada sonrisa</h2>
+        <p data-i18n="services.subtitle">Combinamos arte, ciencia y tecnología para ofrecerte resultados naturales, duraderos y a la altura de tus expectativas.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal" data-d="1">
+          <h3 data-i18n="services.1.title">Limpieza dental</h3>
+          <p data-i18n="services.1.desc">Profilaxis profesional que elimina sarro y manchas, dejando tus dientes sanos, brillantes y libres de bacterias.</p>
+        </article>
+        <article class="card reveal" data-d="2">
+          <h3 data-i18n="services.2.title">Ortodoncia</h3>
+          <p data-i18n="services.2.desc">Brackets estéticos y alineadores invisibles para corregir la posición dental con la máxima discreción.</p>
+        </article>
+        <article class="card reveal" data-d="3">
+          <h3 data-i18n="services.3.title">Implantes dentales</h3>
+          <p data-i18n="services.3.desc">Reemplazo de piezas perdidas con titanio biocompatible: una solución fija, estable y de aspecto natural.</p>
+        </article>
+        <article class="card reveal" data-d="1">
+          <h3 data-i18n="services.4.title">Diseño de sonrisa</h3>
+          <p data-i18n="services.4.desc">Planificación digital personalizada con carillas y estética avanzada para una sonrisa armónica y radiante.</p>
+        </article>
+        <article class="card reveal" data-d="2">
+          <h3 data-i18n="services.5.title">Blanqueamiento dental</h3>
+          <p data-i18n="services.5.desc">Sistemas seguros que aclaran varios tonos en una sesión, sin dañar el esmalte y con resultados inmediatos.</p>
+        </article>
+        <article class="card reveal" data-d="3">
+          <h3 data-i18n="services.6.title">Endodoncia</h3>
+          <p data-i18n="services.6.desc">Tratamiento de conductos indoloro y de precisión para salvar tu diente natural y eliminar el dolor.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== BENEFICIOS ===================== -->
+    <section class="section container" id="beneficios">
+      <div class="benefits reveal">
+        <div class="inner">
+          <div class="section-head" style="margin-bottom:1rem;">
+            <span class="eyebrow" data-i18n="benefits.eyebrow">¿Por qué Dentalisima?</span>
+            <h2 data-i18n="benefits.title">Una experiencia clínica pensada para tu tranquilidad</h2>
+          </div>
+
+          <div class="metrics">
+            <div class="metric"><div class="num" data-count="15">0</div><div class="lab" data-i18n="benefits.metric.1">Años de trayectoria</div></div>
+            <div class="metric"><div class="num" data-count="1280" data-suffix="+">0</div><div class="lab" data-i18n="benefits.metric.2">Pacientes atendidos</div></div>
+            <div class="metric"><div class="num" data-count="98" data-suffix="%">0</div><div class="lab" data-i18n="benefits.metric.3">Casos exitosos</div></div>
+            <div class="metric"><div class="num" data-count="12">0</div><div class="lab" data-i18n="benefits.metric.4">Especialistas</div></div>
+          </div>
+
+          <ul class="benefit-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.1">Atención personalizada en cada visita</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.2">Tecnología de última generación</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.3">Especialistas certificados</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.4">Instalaciones modernas e higiénicas</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.5">Financiamiento a tu medida</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span data-i18n="benefits.list.6">Diagnóstico digital sin sorpresas</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section class="section container" id="galeria">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="gallery.eyebrow">Galería · Antes y después</span>
+        <h2 data-i18n="gallery.title">Resultados que hablan por sí solos</h2>
+        <p data-i18n="gallery.subtitle">Cada transformación es el reflejo de un plan de tratamiento meticuloso y centrado en ti.</p>
+      </div>
+
+      <div class="masonry">
+        <!-- Cada bloque es una comparativa estilizada (reemplazable por fotografías reales) -->
+        <figure class="ga reveal">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#cfd6e0"/><g fill="#b7c0cd"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="68" y="33" width="16" height="18" rx="3"/><rect x="88" y="34" width="10" height="15" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="28" y="33" width="14" height="17" rx="3"/><rect x="46" y="32" width="15" height="19" rx="3"/><rect x="65" y="32" width="15" height="19" rx="3"/><rect x="84" y="33" width="13" height="17" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.1">Diseño de sonrisa con carillas</figcaption>
+        </figure>
+
+        <figure class="ga tall reveal" data-d="1">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 45 Q60 18 106 45 L99 70 Q60 98 21 70 Z" fill="#cfd6e0"/><g fill="#b7c0cd"><rect x="32" y="49" width="13" height="17" rx="3"/><rect x="49" y="47" width="15" height="20" rx="3"/><rect x="68" y="48" width="15" height="19" rx="3"/><rect x="86" y="50" width="10" height="15" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 45 Q60 18 106 45 L99 70 Q60 98 21 70 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="30" y="48" width="14" height="18" rx="3"/><rect x="47" y="47" width="15" height="20" rx="3"/><rect x="66" y="47" width="15" height="20" rx="3"/><rect x="85" y="48" width="13" height="18" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.2">Ortodoncia invisible · 14 meses</figcaption>
+        </figure>
+
+        <figure class="ga reveal" data-d="2">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#d6cdc0"/><g fill="#c4b8a6"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="68" y="33" width="16" height="18" rx="3"/><rect x="88" y="34" width="10" height="15" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="68" y="33" width="16" height="18" rx="3"/><rect x="88" y="34" width="10" height="15" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.3">Blanqueamiento profesional</figcaption>
+        </figure>
+
+        <figure class="ga reveal" data-d="1">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#cfd6e0"/><g fill="#b7c0cd"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="50" y="36" width="14" height="14" rx="3"/><rect x="70" y="33" width="16" height="18" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="68" y="33" width="16" height="18" rx="3"/><rect x="88" y="34" width="10" height="15" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.4">Implante unitario + corona</figcaption>
+        </figure>
+
+        <figure class="ga tall reveal" data-d="2">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 45 Q60 18 106 45 L99 70 Q60 98 21 70 Z" fill="#d6cdc0"/><g fill="#c4b8a6"><rect x="32" y="49" width="13" height="17" rx="3"/><rect x="49" y="51" width="15" height="14" rx="3"/><rect x="68" y="48" width="15" height="19" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 45 Q60 18 106 45 L99 70 Q60 98 21 70 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="30" y="48" width="14" height="18" rx="3"/><rect x="47" y="47" width="15" height="20" rx="3"/><rect x="66" y="47" width="15" height="20" rx="3"/><rect x="85" y="48" width="13" height="18" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.5">Rehabilitación oral completa</figcaption>
+        </figure>
+
+        <figure class="ga reveal" data-d="3">
+          <div class="pair">
+            <div class="half before"><span class="badge b1" data-i18n="gal_before">Antes</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#cfd6e0"/><g fill="#b7c0cd"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="70" y="36" width="14" height="14" rx="3"/></g></svg></div>
+            <div class="half after"><span class="badge b2" data-i18n="gal_after">Después</span><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 30 Q60 5 106 30 L100 52 Q60 80 20 52 Z" fill="#fff"/><g fill="#eaf2ff"><rect x="30" y="34" width="14" height="16" rx="3"/><rect x="48" y="33" width="16" height="18" rx="3"/><rect x="68" y="33" width="16" height="18" rx="3"/><rect x="88" y="34" width="10" height="15" rx="3"/></g></svg></div>
+          </div>
+          <figcaption class="cap" data-i18n="gallery.cap.6">Cierre de espacios estéticos</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section class="section testi" id="testimonios">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow" data-i18n="testi.eyebrow">Testimonios</span>
+          <h2 data-i18n="testi.title">Historias que nos enorgullecen</h2>
+          <p data-i18n="testi.subtitle">La confianza de nuestros pacientes es el mejor reflejo de nuestro trabajo.</p>
+        </div>
+
+        <div class="testi__viewport reveal" data-d="1">
+          <div class="testi__track" id="testiTrack">
+            <!-- Slides generados desde JS -->
+          </div>
+        </div>
+
+        <div class="testi__nav">
+          <button class="testi__arrow" id="testiPrev" aria-label="Testimonio anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="testi__dots" id="testiDots" role="tablist" aria-label="Seleccionar testimonio"></div>
+          <button class="testi__arrow" id="testiNext" aria-label="Siguiente testimonio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESERVACIÓN / CALENDARIO ===================== -->
+    <section class="section container" id="reservar">
+      <div class="booking__grid">
+        <div class="booking__copy reveal">
+          <span class="eyebrow" data-i18n="booking.eyebrow">Reserva tu cita</span>
+          <h2 data-i18n="booking.title">Tu nueva sonrisa empieza con una cita</h2>
+          <p class="lead" data-i18n="booking.subtitle">Elige el día y la hora que mejor te convengan. Nuestro equipo confirmará tu reservación en minutos.</p>
+          <ul>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M3 9h18M8 2v4M16 2v4" stroke-linecap="round"/></svg></span> <span data-i18n="booking.bullet.1">Disponibilidad en tiempo real</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></span> <span data-i18n="booking.bullet.2">Primera valoración sin costo</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H7l-3 3z" stroke-linejoin="round"/></svg></span> <span data-i18n="booking.bullet.3">Recordatorios por WhatsApp</span></li>
+          </ul>
+          <div class="integ">
+            <span data-i18n="booking.tag.1">Compatible con Google Calendar</span>
+            <span data-i18n="booking.tag.2">Calendly</span>
+            <span data-i18n="booking.tag.3">Calendario propio</span>
+          </div>
+        </div>
+
+        <!-- Programador visual (interfaz lista para conectar a tu calendario) -->
+        <div class="scheduler reveal" data-d="1" aria-label="Selector de cita">
+          <div class="scheduler__top">
+            <span class="m" id="calMonth">Mes</span>
+            <span class="legend"><i></i> <span data-i18n="booking.legend">Disponible</span></span>
+          </div>
+          <div class="cal" id="cal" role="grid" aria-label="Días disponibles"></div>
+
+          <div class="slots">
+            <p data-i18n="booking.slots">Horarios disponibles</p>
+            <div class="chips" id="slots">
+              <button class="chip" type="button">09:00</button>
+              <button class="chip" type="button">10:30</button>
+              <button class="chip" type="button">12:00</button>
+              <button class="chip" type="button">13:30</button>
+              <button class="chip" type="button">16:00</button>
+              <button class="chip" type="button">17:30</button>
+              <button class="chip" type="button">18:30</button>
+              <button class="chip" type="button">19:30</button>
+            </div>
+          </div>
+
+          <p class="summary" id="summary" data-i18n="booking.summaryEmpty">Selecciona un día y un horario para continuar.</p>
+          <a href="#" class="btn btn-primary" id="bookBtn" data-wa data-i18n="booking.cta">Reserva tu cita ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="section container">
+      <div class="cta-final reveal">
+        <div class="inner">
+          <h2 data-i18n="cta.title">Agenda hoy y comienza la transformación de tu sonrisa.</h2>
+          <p data-i18n="cta.subtitle">Da el primer paso hacia una sonrisa sana, estética y llena de confianza. Estamos listos para recibirte.</p>
+          <div class="row">
+            <a href="#reservar" class="btn btn-light" data-i18n="cta.reserve">Reservar consulta</a>
+            <a href="#" class="btn btn-wa" data-wa data-i18n="cta.whatsapp">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#inicio" class="brand">
+            <img src="data:image/jpeg;base64,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" class="mark" alt="Logo Dentalisima" width="48" height="48" loading="lazy" />
+            Dentalisima
+          </a>
+          <p data-i18n="footer.tagline">Diseñamos sonrisas que transforman vidas. Odontología premium con calidez humana y tecnología de vanguardia.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
+            <a href="#" aria-label="WhatsApp" data-wa><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.95C.15 5.34 5.5 0 12.06 0a11.82 11.82 0 018.41 3.49 11.82 11.82 0 013.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.69-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.45 1.59 5.45 0 9.89-4.43 9.89-9.88 0-5.46-4.44-9.9-9.89-9.9S2.16 6.49 2.16 11.94c0 2.28.67 3.99 1.79 5.78l-1 3.66 3.65-1.25z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.hours.title">Horarios</h4>
+          <ul>
+            <li data-i18n="footer.hours.1">Lun – Vie: 9:00 – 20:00</li>
+            <li data-i18n="footer.hours.2">Sábado: 9:00 – 14:00</li>
+            <li data-i18n="footer.hours.3">Domingo: Cerrado</li>
+            <li data-i18n="footer.hours.4">Urgencias: 24/7</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contact.title">Contacto</h4>
+          <ul>
+            <li data-i18n="footer.contact.address">Av. de la Sonrisa 123, Piso 4</li>
+            <li data-i18n="footer.contact.city">Ciudad de México</li>
+            <li><a href="tel:+525555555555">+52 55 5555 5555</a></li>
+            <li><a href="mailto:hola@dentalisima.com">hola@dentalisima.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.services.title">Servicios</h4>
+          <ul>
+            <li><a href="#servicios" data-i18n="footer.services.1">Ortodoncia</a></li>
+            <li><a href="#servicios" data-i18n="footer.services.2">Implantes dentales</a></li>
+            <li><a href="#servicios" data-i18n="footer.services.3">Diseño de sonrisa</a></li>
+            <li><a href="#servicios" data-i18n="footer.services.4">Blanqueamiento</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Dentalisima. <span data-i18n="footer.copyright">Todos los derechos reservados.</span></span>
+        <span><a href="#" data-i18n="footer.privacy">Aviso de privacidad</a> · <a href="#" data-i18n="footer.terms">Términos y condiciones</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOTANTE ===================== -->
+  <a class="wa-float" href="#" data-wa aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.95C.15 5.34 5.5 0 12.06 0a11.82 11.82 0 018.41 3.49 11.82 11.82 0 013.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.69-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.45 1.59 5.45 0 9.89-4.43 9.89-9.88 0-5.46-4.44-9.9-9.89-9.9S2.16 6.49 2.16 11.94c0 2.28.67 3.99 1.79 5.78l-1 3.66 3.65-1.25zm11.39-5.5c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.96c-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.64.07a8.13 8.13 0 01-2.39-1.47 9 9 0 01-1.66-2.06c-.17-.3 0-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41z"/></svg>
+  </a>
+
+  <script>
+  /* =========================================================
+     DENTALISIMA — JavaScript (vanilla, mínimo)
+     ========================================================= */
+
+  /* =========================================================
+     MOTOR DE TRADUCCIÓN — 5 idiomas
+     ========================================================= */
+  window.TRANSLATIONS = {"es":{"nav.services":"Servicios","nav.benefits":"Beneficios","nav.testimonials":"Testimonios","nav.book":"Reservar","nav.contact":"Contacto","nav.cta":"Agendar cita","splash.tagline":"Diseñamos sonrisas que transforman vidas.","splash.subtitle":"Odontología premium con tecnología de última generación.","hero.badge":"Clínica dental premium · Citas disponibles hoy","hero.title":"Tu sonrisa merece <em>atención de excelencia.</em>","hero.subtitle":"Especialistas en odontología estética, implantes, ortodoncia y salud dental integral.","hero.ctaBook":"Agendar cita","hero.ctaWa":"WhatsApp","hero.rating":"4.9/5 · +1,280 pacientes satisfechos","trust.1":"Esterilización certificada","trust.2":"Especialistas certificados","trust.3":"Tecnología digital 3D","trust.4":"Financiamiento disponible","services.eyebrow":"Nuestros servicios","services.title":"Tratamientos integrales para cada sonrisa","services.subtitle":"Combinamos arte, ciencia y tecnología para ofrecerte resultados naturales, duraderos y a la altura de tus expectativas.","services.1.title":"Limpieza dental","services.1.desc":"Profilaxis profesional que elimina sarro y manchas, dejando tus dientes sanos, brillantes y libres de bacterias.","services.2.title":"Ortodoncia","services.2.desc":"Brackets estéticos y alineadores invisibles para corregir la posición dental con la máxima discreción.","services.3.title":"Implantes dentales","services.3.desc":"Reemplazo de piezas perdidas con titanio biocompatible: una solución fija, estable y de aspecto natural.","services.4.title":"Diseño de sonrisa","services.4.desc":"Planificación digital personalizada con carillas y estética avanzada para una sonrisa armónica y radiante.","services.5.title":"Blanqueamiento dental","services.5.desc":"Sistemas seguros que aclaran varios tonos en una sesión, sin dañar el esmalte y con resultados inmediatos.","services.6.title":"Endodoncia","services.6.desc":"Tratamiento de conductos indoloro y de precisión para salvar tu diente natural y eliminar el dolor.","benefits.eyebrow":"¿Por qué Dentalisima?","benefits.title":"Una experiencia clínica pensada para tu tranquilidad","benefits.metric.1":"Años de trayectoria","benefits.metric.2":"Pacientes atendidos","benefits.metric.3":"Casos exitosos","benefits.metric.4":"Especialistas","benefits.list.1":"Atención personalizada en cada visita","benefits.list.2":"Tecnología de última generación","benefits.list.3":"Especialistas certificados","benefits.list.4":"Instalaciones modernas e higiénicas","benefits.list.5":"Financiamiento a tu medida","benefits.list.6":"Diagnóstico digital sin sorpresas","gallery.eyebrow":"Galería · Antes y después","gallery.title":"Resultados que hablan por sí solos","gallery.subtitle":"Cada transformación es el reflejo de un plan de tratamiento meticuloso y centrado en ti.","gallery.cap.1":"Diseño de sonrisa con carillas","gallery.cap.2":"Ortodoncia invisible · 14 meses","gallery.cap.3":"Blanqueamiento profesional","gallery.cap.4":"Implante unitario + corona","gallery.cap.5":"Rehabilitación oral completa","gallery.cap.6":"Cierre de espacios estéticos","gal_before":"Antes","gal_after":"Después","testi.eyebrow":"Testimonios","testi.title":"Historias que nos enorgullecen","testi.subtitle":"La confianza de nuestros pacientes es el mejor reflejo de nuestro trabajo.","testi.1.q":"Tenía pánico al dentista y aquí me sentí en casa. El resultado de mi diseño de sonrisa superó todo lo que imaginé.","testi.1.r":"Diseño de sonrisa","testi.2.q":"Profesionalismo de principio a fin. Mis implantes se ven y se sienten completamente naturales.","testi.2.r":"Implantes dentales","testi.3.q":"La ortodoncia invisible cambió mi vida sin que nadie lo notara. Atención impecable en cada cita.","testi.3.r":"Ortodoncia invisible","testi.4.q":"Instalaciones de lujo, equipo cálido y resultados increíbles. Sin duda la mejor decisión para mi salud dental.","testi.4.r":"Rehabilitación oral","booking.eyebrow":"Reserva tu cita","booking.title":"Tu nueva sonrisa empieza con una cita","booking.subtitle":"Elige el día y la hora que mejor te convengan. Nuestro equipo confirmará tu reservación en minutos.","booking.bullet.1":"Disponibilidad en tiempo real","booking.bullet.2":"Primera valoración sin costo","booking.bullet.3":"Recordatorios por WhatsApp","booking.tag.1":"Compatible con Google Calendar","booking.tag.2":"Calendly","booking.tag.3":"Calendario propio","booking.legend":"Disponible","booking.slots":"Horarios disponibles","booking.summaryEmpty":"Selecciona un día y un horario para continuar.","booking.summaryDay":"Día seleccionado: <b>{day} de {month}</b>. Elige un horario.","booking.summaryFull":"Cita seleccionada: <b>{day} de {month} · {slot} h</b>","booking.cta":"Reserva tu cita ahora","cta.title":"Agenda hoy y comienza la transformación de tu sonrisa.","cta.subtitle":"Da el primer paso hacia una sonrisa sana, estética y llena de confianza. Estamos listos para recibirte.","cta.reserve":"Reservar consulta","cta.whatsapp":"Escríbenos por WhatsApp","footer.tagline":"Diseñamos sonrisas que transforman vidas. Odontología premium con calidez humana y tecnología de vanguardia.","footer.hours.title":"Horarios","footer.hours.1":"Lun – Vie: 9:00 – 20:00","footer.hours.2":"Sábado: 9:00 – 14:00","footer.hours.3":"Domingo: Cerrado","footer.hours.4":"Urgencias: 24/7","footer.contact.title":"Contacto","footer.contact.address":"Av. de la Sonrisa 123, Piso 4","footer.contact.city":"Ciudad de México","footer.services.title":"Servicios","footer.services.1":"Ortodoncia","footer.services.2":"Implantes dentales","footer.services.3":"Diseño de sonrisa","footer.services.4":"Blanqueamiento","footer.privacy":"Aviso de privacidad","footer.terms":"Términos y condiciones","footer.copyright":"Todos los derechos reservados.","doc.title":"Dentalisima | Odontología estética e implantes de excelencia","doc.desc":"Clínica dental premium especializada en odontología estética, implantes, ortodoncia, diseño de sonrisa y salud dental integral. Tecnología avanzada y atención personalizada.","wa.msg":"Hola Dentalisima, me gustaría agendar una consulta.","wa.msgBooking":"Hola Dentalisima, quiero agendar una cita el {day} de {month} a las {slot} h.","lang.label":"Idioma"},"en":{"nav.services":"Services","nav.benefits":"Benefits","nav.testimonials":"Testimonials","nav.book":"Book","nav.contact":"Contact","nav.cta":"Book appointment","splash.tagline":"We design smiles that transform lives.","splash.subtitle":"Premium dentistry with cutting-edge technology.","hero.badge":"Premium dental clinic · Appointments available today","hero.title":"Your smile deserves <em>excellent care.</em>","hero.subtitle":"Specialists in cosmetic dentistry, implants, orthodontics and comprehensive dental health.","hero.ctaBook":"Book appointment","hero.ctaWa":"WhatsApp","hero.rating":"4.9/5 · +1,280 satisfied patients","trust.1":"Certified sterilization","trust.2":"Certified specialists","trust.3":"3D digital technology","trust.4":"Financing available","services.eyebrow":"Our services","services.title":"Comprehensive treatments for every smile","services.subtitle":"We combine art, science and technology to deliver natural, long-lasting results that exceed your expectations.","services.1.title":"Dental cleaning","services.1.desc":"Professional prophylaxis that removes tartar and stains, leaving your teeth healthy, bright and bacteria-free.","services.2.title":"Orthodontics","services.2.desc":"Aesthetic brackets and invisible aligners to correct dental positioning with maximum discretion.","services.3.title":"Dental implants","services.3.desc":"Replacement of missing teeth with biocompatible titanium: a fixed, stable and natural-looking solution.","services.4.title":"Smile design","services.4.desc":"Personalized digital planning with veneers and advanced aesthetics for a harmonious, radiant smile.","services.5.title":"Teeth whitening","services.5.desc":"Safe systems that lighten several shades in one session, without damaging enamel and with immediate results.","services.6.title":"Endodontics","services.6.desc":"Painless and precise root canal treatment to save your natural tooth and eliminate pain.","benefits.eyebrow":"Why Dentalisima?","benefits.title":"A clinical experience designed for your peace of mind","benefits.metric.1":"Years of experience","benefits.metric.2":"Patients treated","benefits.metric.3":"Successful cases","benefits.metric.4":"Specialists","benefits.list.1":"Personalized care at every visit","benefits.list.2":"State-of-the-art technology","benefits.list.3":"Certified specialists","benefits.list.4":"Modern and hygienic facilities","benefits.list.5":"Financing tailored to you","benefits.list.6":"Digital diagnosis without surprises","gallery.eyebrow":"Gallery · Before & After","gallery.title":"Results that speak for themselves","gallery.subtitle":"Every transformation reflects a meticulous treatment plan centered on you.","gallery.cap.1":"Smile design with veneers","gallery.cap.2":"Invisible orthodontics · 14 months","gallery.cap.3":"Professional whitening","gallery.cap.4":"Single implant + crown","gallery.cap.5":"Full oral rehabilitation","gallery.cap.6":"Aesthetic gap closure","gal_before":"Before","gal_after":"After","testi.eyebrow":"Testimonials","testi.title":"Stories that make us proud","testi.subtitle":"Our patients' trust is the best reflection of our work.","testi.1.q":"I was terrified of the dentist and here I felt at home. The result of my smile design exceeded everything I imagined.","testi.1.r":"Smile design","testi.2.q":"Professionalism from start to finish. My implants look and feel completely natural.","testi.2.r":"Dental implants","testi.3.q":"Invisible orthodontics changed my life without anyone noticing. Impeccable care at every visit.","testi.3.r":"Invisible orthodontics","testi.4.q":"Luxury facilities, warm team and incredible results. Definitely the best decision for my dental health.","testi.4.r":"Oral rehabilitation","booking.eyebrow":"Book your appointment","booking.title":"Your new smile starts with an appointment","booking.subtitle":"Choose the day and time that suit you best. Our team will confirm your booking within minutes.","booking.bullet.1":"Real-time availability","booking.bullet.2":"First consultation free of charge","booking.bullet.3":"WhatsApp reminders","booking.tag.1":"Compatible with Google Calendar","booking.tag.2":"Calendly","booking.tag.3":"Custom calendar","booking.legend":"Available","booking.slots":"Available time slots","booking.summaryEmpty":"Select a day and a time slot to continue.","booking.summaryDay":"Day selected: <b>{month} {day}</b>. Choose a time.","booking.summaryFull":"Appointment selected: <b>{month} {day} · {slot}</b>","booking.cta":"Book your appointment now","cta.title":"Book today and start your smile transformation.","cta.subtitle":"Take the first step toward a healthy, beautiful and confident smile. We're ready to welcome you.","cta.reserve":"Book consultation","cta.whatsapp":"Message us on WhatsApp","footer.tagline":"We design smiles that transform lives. Premium dentistry with human warmth and cutting-edge technology.","footer.hours.title":"Hours","footer.hours.1":"Mon – Fri: 9:00 – 20:00","footer.hours.2":"Saturday: 9:00 – 14:00","footer.hours.3":"Sunday: Closed","footer.hours.4":"Emergencies: 24/7","footer.contact.title":"Contact","footer.contact.address":"Av. de la Sonrisa 123, 4th floor","footer.contact.city":"Mexico City","footer.services.title":"Services","footer.services.1":"Orthodontics","footer.services.2":"Dental implants","footer.services.3":"Smile design","footer.services.4":"Whitening","footer.privacy":"Privacy policy","footer.terms":"Terms & conditions","footer.copyright":"All rights reserved.","doc.title":"Dentalisima | Excellence in cosmetic dentistry & implants","doc.desc":"Premium dental clinic specializing in cosmetic dentistry, implants, orthodontics, smile design and comprehensive dental health. Advanced technology and personalized care.","wa.msg":"Hello Dentalisima, I'd like to book an appointment.","wa.msgBooking":"Hello Dentalisima, I'd like to book an appointment for {month} {day} at {slot}.","lang.label":"Language"},"it":{"nav.services":"Servizi","nav.benefits":"Vantaggi","nav.testimonials":"Testimonianze","nav.book":"Prenota","nav.contact":"Contatti","nav.cta":"Prenota appuntamento","splash.tagline":"Disegniamo sorrisi che trasformano vite.","splash.subtitle":"Odontoiatria premium con tecnologia all'avanguardia.","hero.badge":"Clinica dentale premium · Appuntamenti disponibili oggi","hero.title":"Il tuo sorriso merita <em>cure di eccellenza.</em>","hero.subtitle":"Specialisti in odontoiatria estetica, impianti, ortodonzia e salute dentale integrale.","hero.ctaBook":"Prenota appuntamento","hero.ctaWa":"WhatsApp","hero.rating":"4,9/5 · +1.280 pazienti soddisfatti","trust.1":"Sterilizzazione certificata","trust.2":"Specialisti certificati","trust.3":"Tecnologia digitale 3D","trust.4":"Finanziamento disponibile","services.eyebrow":"I nostri servizi","services.title":"Trattamenti integrali per ogni sorriso","services.subtitle":"Uniamo arte, scienza e tecnologia per offrirti risultati naturali, duraturi e all'altezza delle tue aspettative.","services.1.title":"Pulizia dentale","services.1.desc":"Profilassi professionale che elimina tartaro e macchie, lasciando i tuoi denti sani, luminosi e privi di batteri.","services.2.title":"Ortodonzia","services.2.desc":"Brackets estetici e allineatori invisibili per correggere la posizione dentale con la massima discrezione.","services.3.title":"Impianti dentali","services.3.desc":"Sostituzione dei denti mancanti con titanio biocompatibile: una soluzione fissa, stabile e dall'aspetto naturale.","services.4.title":"Disegno del sorriso","services.4.desc":"Pianificazione digitale personalizzata con faccette ed estetica avanzata per un sorriso armonioso e radioso.","services.5.title":"Sbiancamento dentale","services.5.desc":"Sistemi sicuri che schiariscono di diversi toni in una sessione, senza danneggiare lo smalto e con risultati immediati.","services.6.title":"Endodonzia","services.6.desc":"Trattamento canalare indolore e di precisione per salvare il tuo dente naturale ed eliminare il dolore.","benefits.eyebrow":"Perché Dentalisima?","benefits.title":"Un'esperienza clinica pensata per la tua tranquillità","benefits.metric.1":"Anni di esperienza","benefits.metric.2":"Pazienti trattati","benefits.metric.3":"Casi di successo","benefits.metric.4":"Specialisti","benefits.list.1":"Attenzione personalizzata ad ogni visita","benefits.list.2":"Tecnologia all'avanguardia","benefits.list.3":"Specialisti certificati","benefits.list.4":"Strutture moderne e igieniche","benefits.list.5":"Finanziamento su misura","benefits.list.6":"Diagnosi digitale senza sorprese","gallery.eyebrow":"Galleria · Prima e dopo","gallery.title":"Risultati che parlano da soli","gallery.subtitle":"Ogni trasformazione riflette un piano di trattamento meticoloso e centrato su di te.","gallery.cap.1":"Disegno del sorriso con faccette","gallery.cap.2":"Ortodonzia invisibile · 14 mesi","gallery.cap.3":"Sbiancamento professionale","gallery.cap.4":"Impianto singolo + corona","gallery.cap.5":"Riabilitazione orale completa","gallery.cap.6":"Chiusura estetica degli spazi","gal_before":"Prima","gal_after":"Dopo","testi.eyebrow":"Testimonianze","testi.title":"Storie che ci rendono orgogliosi","testi.subtitle":"La fiducia dei nostri pazienti è il miglior riflesso del nostro lavoro.","testi.1.q":"Avevo il panico del dentista e qui mi sono sentito a casa. Il risultato del mio disegno del sorriso ha superato ogni aspettativa.","testi.1.r":"Disegno del sorriso","testi.2.q":"Professionalità dall'inizio alla fine. I miei impianti sembrano e si sentono completamente naturali.","testi.2.r":"Impianti dentali","testi.3.q":"L'ortodonzia invisibile ha cambiato la mia vita senza che nessuno se ne accorgesse. Cura impeccabile ad ogni visita.","testi.3.r":"Ortodonzia invisibile","testi.4.q":"Strutture di lusso, team accogliente e risultati incredibili. Senza dubbio la migliore decisione per la mia salute dentale.","testi.4.r":"Riabilitazione orale","booking.eyebrow":"Prenota il tuo appuntamento","booking.title":"Il tuo nuovo sorriso inizia con un appuntamento","booking.subtitle":"Scegli il giorno e l'ora più adatti a te. Il nostro team confermerà la tua prenotazione in pochi minuti.","booking.bullet.1":"Disponibilità in tempo reale","booking.bullet.2":"Prima valutazione gratuita","booking.bullet.3":"Promemoria via WhatsApp","booking.tag.1":"Compatibile con Google Calendar","booking.tag.2":"Calendly","booking.tag.3":"Calendario proprio","booking.legend":"Disponibile","booking.slots":"Orari disponibili","booking.summaryEmpty":"Seleziona un giorno e un orario per continuare.","booking.summaryDay":"Giorno selezionato: <b>{day} {month}</b>. Scegli un orario.","booking.summaryFull":"Appuntamento selezionato: <b>{day} {month} · {slot}</b>","booking.cta":"Prenota ora il tuo appuntamento","cta.title":"Prenota oggi e inizia la trasformazione del tuo sorriso.","cta.subtitle":"Fai il primo passo verso un sorriso sano, estetico e pieno di sicurezza. Siamo pronti ad accoglierti.","cta.reserve":"Prenota visita","cta.whatsapp":"Scrivici su WhatsApp","footer.tagline":"Disegniamo sorrisi che trasformano vite. Odontoiatria premium con calore umano e tecnologia all'avanguardia.","footer.hours.title":"Orari","footer.hours.1":"Lun – Ven: 9:00 – 20:00","footer.hours.2":"Sabato: 9:00 – 14:00","footer.hours.3":"Domenica: Chiuso","footer.hours.4":"Emergenze: 24/7","footer.contact.title":"Contatti","footer.contact.address":"Av. de la Sonrisa 123, 4° piano","footer.contact.city":"Città del Messico","footer.services.title":"Servizi","footer.services.1":"Ortodonzia","footer.services.2":"Impianti dentali","footer.services.3":"Disegno del sorriso","footer.services.4":"Sbiancamento","footer.privacy":"Informativa sulla privacy","footer.terms":"Termini e condizioni","footer.copyright":"Tutti i diritti riservati.","doc.title":"Dentalisima | Eccellenza in odontoiatria estetica e impianti","doc.desc":"Clinica dentale premium specializzata in odontoiatria estetica, impianti, ortodonzia, disegno del sorriso e salute dentale integrale. Tecnologia avanzata e cura personalizzata.","wa.msg":"Salve Dentalisima, vorrei prenotare un appuntamento.","wa.msgBooking":"Salve Dentalisima, vorrei prenotare un appuntamento il {day} {month} alle {slot}.","lang.label":"Lingua"},"de":{"nav.services":"Leistungen","nav.benefits":"Vorteile","nav.testimonials":"Erfahrungen","nav.book":"Termin","nav.contact":"Kontakt","nav.cta":"Termin buchen","splash.tagline":"Wir gestalten Lächeln, die Leben verändern.","splash.subtitle":"Premium-Zahnmedizin mit modernster Technologie.","hero.badge":"Premium-Zahnklinik · Heute Termine verfügbar","hero.title":"Ihr Lächeln verdient <em>exzellente Betreuung.</em>","hero.subtitle":"Spezialisten für ästhetische Zahnmedizin, Implantate, Kieferorthopädie und umfassende Zahngesundheit.","hero.ctaBook":"Termin buchen","hero.ctaWa":"WhatsApp","hero.rating":"4,9/5 · +1.280 zufriedene Patienten","trust.1":"Zertifizierte Sterilisation","trust.2":"Zertifizierte Spezialisten","trust.3":"Digitale 3D-Technologie","trust.4":"Finanzierung verfügbar","services.eyebrow":"Unsere Leistungen","services.title":"Umfassende Behandlungen für jedes Lächeln","services.subtitle":"Wir verbinden Kunst, Wissenschaft und Technologie, um Ihnen natürliche, langlebige Ergebnisse zu liefern, die Ihre Erwartungen übertreffen.","services.1.title":"Professionelle Zahnreinigung","services.1.desc":"Professionelle Prophylaxe, die Zahnstein und Verfärbungen entfernt und Ihre Zähne gesund, strahlend und bakterienfrei hinterlässt.","services.2.title":"Kieferorthopädie","services.2.desc":"Ästhetische Brackets und unsichtbare Aligner zur Korrektur der Zahnstellung mit maximaler Diskretion.","services.3.title":"Zahnimplantate","services.3.desc":"Ersatz verlorener Zähne mit biokompatiblem Titan: eine feste, stabile und natürlich aussehende Lösung.","services.4.title":"Smile Design","services.4.desc":"Personalisierte digitale Planung mit Veneers und fortschrittlicher Ästhetik für ein harmonisches, strahlendes Lächeln.","services.5.title":"Zahnaufhellung","services.5.desc":"Sichere Systeme, die in einer Sitzung mehrere Nuancen aufhellen, ohne den Zahnschmelz zu beschädigen und mit sofortigen Ergebnissen.","services.6.title":"Endodontie","services.6.desc":"Schmerzlose und präzise Wurzelkanalbehandlung, um Ihren natürlichen Zahn zu retten und Schmerzen zu beseitigen.","benefits.eyebrow":"Warum Dentalisima?","benefits.title":"Eine klinische Erfahrung, die für Ihre Ruhe konzipiert ist","benefits.metric.1":"Jahre Erfahrung","benefits.metric.2":"Behandelte Patienten","benefits.metric.3":"Erfolgreiche Fälle","benefits.metric.4":"Spezialisten","benefits.list.1":"Persönliche Betreuung bei jedem Besuch","benefits.list.2":"Modernste Technologie","benefits.list.3":"Zertifizierte Spezialisten","benefits.list.4":"Moderne und hygienische Einrichtungen","benefits.list.5":"Maßgeschneiderte Finanzierung","benefits.list.6":"Digitale Diagnose ohne Überraschungen","gallery.eyebrow":"Galerie · Vorher & Nachher","gallery.title":"Ergebnisse, die für sich sprechen","gallery.subtitle":"Jede Transformation spiegelt einen sorgfältigen, auf Sie zugeschnittenen Behandlungsplan wider.","gallery.cap.1":"Smile Design mit Veneers","gallery.cap.2":"Unsichtbare Zahnspange · 14 Monate","gallery.cap.3":"Professionelles Bleaching","gallery.cap.4":"Einzelimplantat + Krone","gallery.cap.5":"Komplette orale Rehabilitation","gallery.cap.6":"Ästhetische Lückenschließung","gal_before":"Vorher","gal_after":"Nachher","testi.eyebrow":"Erfahrungsberichte","testi.title":"Geschichten, die uns stolz machen","testi.subtitle":"Das Vertrauen unserer Patienten ist die beste Spiegelung unserer Arbeit.","testi.1.q":"Ich hatte Panik vor dem Zahnarzt und hier fühlte ich mich zu Hause. Das Ergebnis meines Smile Designs übertraf alles, was ich mir vorgestellt hatte.","testi.1.r":"Smile Design","testi.2.q":"Professionalität von Anfang bis Ende. Meine Implantate sehen aus und fühlen sich völlig natürlich an.","testi.2.r":"Zahnimplantate","testi.3.q":"Die unsichtbare Zahnspange hat mein Leben verändert, ohne dass es jemand bemerkte. Tadellose Betreuung bei jedem Termin.","testi.3.r":"Unsichtbare Kieferorthopädie","testi.4.q":"Luxuriöse Räumlichkeiten, herzliches Team und unglaubliche Ergebnisse. Definitiv die beste Entscheidung für meine Zahngesundheit.","testi.4.r":"Orale Rehabilitation","booking.eyebrow":"Termin buchen","booking.title":"Ihr neues Lächeln beginnt mit einem Termin","booking.subtitle":"Wählen Sie den Tag und die Uhrzeit, die Ihnen am besten passen. Unser Team bestätigt Ihre Buchung innerhalb von Minuten.","booking.bullet.1":"Verfügbarkeit in Echtzeit","booking.bullet.2":"Erste Beratung kostenlos","booking.bullet.3":"WhatsApp-Erinnerungen","booking.tag.1":"Kompatibel mit Google Calendar","booking.tag.2":"Calendly","booking.tag.3":"Eigener Kalender","booking.legend":"Verfügbar","booking.slots":"Verfügbare Uhrzeiten","booking.summaryEmpty":"Wählen Sie einen Tag und eine Uhrzeit, um fortzufahren.","booking.summaryDay":"Tag ausgewählt: <b>{day}. {month}</b>. Wählen Sie eine Uhrzeit.","booking.summaryFull":"Termin ausgewählt: <b>{day}. {month} · {slot} Uhr</b>","booking.cta":"Jetzt Termin buchen","cta.title":"Buchen Sie heute und beginnen Sie die Transformation Ihres Lächelns.","cta.subtitle":"Machen Sie den ersten Schritt zu einem gesunden, ästhetischen und selbstbewussten Lächeln. Wir sind bereit, Sie zu empfangen.","cta.reserve":"Beratung buchen","cta.whatsapp":"Per WhatsApp schreiben","footer.tagline":"Wir gestalten Lächeln, die Leben verändern. Premium-Zahnmedizin mit menschlicher Wärme und modernster Technologie.","footer.hours.title":"Öffnungszeiten","footer.hours.1":"Mo – Fr: 9:00 – 20:00","footer.hours.2":"Samstag: 9:00 – 14:00","footer.hours.3":"Sonntag: Geschlossen","footer.hours.4":"Notfälle: 24/7","footer.contact.title":"Kontakt","footer.contact.address":"Av. de la Sonrisa 123, 4. Stock","footer.contact.city":"Mexiko-Stadt","footer.services.title":"Leistungen","footer.services.1":"Kieferorthopädie","footer.services.2":"Zahnimplantate","footer.services.3":"Smile Design","footer.services.4":"Bleaching","footer.privacy":"Datenschutzerklärung","footer.terms":"Allgemeine Geschäftsbedingungen","footer.copyright":"Alle Rechte vorbehalten.","doc.title":"Dentalisima | Exzellenz in ästhetischer Zahnmedizin & Implantaten","doc.desc":"Premium-Zahnklinik spezialisiert auf ästhetische Zahnmedizin, Implantate, Kieferorthopädie, Smile Design und umfassende Zahngesundheit. Modernste Technologie und persönliche Betreuung.","wa.msg":"Hallo Dentalisima, ich möchte einen Termin vereinbaren.","wa.msgBooking":"Hallo Dentalisima, ich möchte einen Termin am {day}. {month} um {slot} Uhr vereinbaren.","lang.label":"Sprache"},"fr":{"nav.services":"Services","nav.benefits":"Avantages","nav.testimonials":"Témoignages","nav.book":"Réserver","nav.contact":"Contact","nav.cta":"Prendre rendez-vous","splash.tagline":"Nous créons des sourires qui transforment des vies.","splash.subtitle":"Dentisterie premium avec une technologie de pointe.","hero.badge":"Clinique dentaire premium · Rendez-vous disponibles aujourd'hui","hero.title":"Votre sourire mérite <em>des soins d'excellence.</em>","hero.subtitle":"Spécialistes en dentisterie esthétique, implants, orthodontie et santé bucco-dentaire intégrale.","hero.ctaBook":"Prendre rendez-vous","hero.ctaWa":"WhatsApp","hero.rating":"4,9/5 · +1 280 patients satisfaits","trust.1":"Stérilisation certifiée","trust.2":"Spécialistes certifiés","trust.3":"Technologie numérique 3D","trust.4":"Financement disponible","services.eyebrow":"Nos services","services.title":"Traitements complets pour chaque sourire","services.subtitle":"Nous combinons l'art, la science et la technologie pour vous offrir des résultats naturels, durables et à la hauteur de vos attentes.","services.1.title":"Détartrage dentaire","services.1.desc":"Prophylaxie professionnelle qui élimine le tartre et les taches, laissant vos dents saines, brillantes et sans bactéries.","services.2.title":"Orthodontie","services.2.desc":"Brackets esthétiques et gouttières invisibles pour corriger la position dentaire avec la plus grande discrétion.","services.3.title":"Implants dentaires","services.3.desc":"Remplacement des dents manquantes par du titane biocompatible : une solution fixe, stable et d'aspect naturel.","services.4.title":"Design du sourire","services.4.desc":"Planification numérique personnalisée avec facettes et esthétique avancée pour un sourire harmonieux et radieux.","services.5.title":"Blanchiment dentaire","services.5.desc":"Systèmes sûrs qui éclaircissent plusieurs teintes en une séance, sans endommager l'émail et avec des résultats immédiats.","services.6.title":"Endodontie","services.6.desc":"Traitement de canal indolore et précis pour sauver votre dent naturelle et éliminer la douleur.","benefits.eyebrow":"Pourquoi Dentalisima ?","benefits.title":"Une expérience clinique pensée pour votre tranquillité","benefits.metric.1":"Années d'expérience","benefits.metric.2":"Patients traités","benefits.metric.3":"Cas réussis","benefits.metric.4":"Spécialistes","benefits.list.1":"Soins personnalisés à chaque visite","benefits.list.2":"Technologie de dernière génération","benefits.list.3":"Spécialistes certifiés","benefits.list.4":"Installations modernes et hygiéniques","benefits.list.5":"Financement sur mesure","benefits.list.6":"Diagnostic numérique sans surprises","gallery.eyebrow":"Galerie · Avant & Après","gallery.title":"Des résultats qui parlent d'eux-mêmes","gallery.subtitle":"Chaque transformation reflète un plan de traitement méticuleux centré sur vous.","gallery.cap.1":"Design du sourire avec facettes","gallery.cap.2":"Orthodontie invisible · 14 mois","gallery.cap.3":"Blanchiment professionnel","gallery.cap.4":"Implant unitaire + couronne","gallery.cap.5":"Réhabilitation orale complète","gallery.cap.6":"Fermeture esthétique des espaces","gal_before":"Avant","gal_after":"Après","testi.eyebrow":"Témoignages","testi.title":"Des histoires qui nous rendent fiers","testi.subtitle":"La confiance de nos patients est le meilleur reflet de notre travail.","testi.1.q":"J'avais une peur panique du dentiste et ici je me suis sentie chez moi. Le résultat du design de mon sourire a dépassé tout ce que j'avais imaginé.","testi.1.r":"Design du sourire","testi.2.q":"Professionnalisme du début à la fin. Mes implants ressemblent et se sentent totalement naturels.","testi.2.r":"Implants dentaires","testi.3.q":"L'orthodontie invisible a changé ma vie sans que personne ne s'en aperçoive. Des soins impeccables à chaque rendez-vous.","testi.3.r":"Orthodontie invisible","testi.4.q":"Installations de luxe, équipe chaleureuse et résultats incroyables. Sans doute la meilleure décision pour ma santé dentaire.","testi.4.r":"Réhabilitation orale","booking.eyebrow":"Réservez votre rendez-vous","booking.title":"Votre nouveau sourire commence par un rendez-vous","booking.subtitle":"Choisissez le jour et l'heure qui vous conviennent le mieux. Notre équipe confirmera votre réservation en quelques minutes.","booking.bullet.1":"Disponibilité en temps réel","booking.bullet.2":"Première consultation gratuite","booking.bullet.3":"Rappels par WhatsApp","booking.tag.1":"Compatible avec Google Calendar","booking.tag.2":"Calendly","booking.tag.3":"Calendrier propre","booking.legend":"Disponible","booking.slots":"Créneaux disponibles","booking.summaryEmpty":"Sélectionnez un jour et un créneau pour continuer.","booking.summaryDay":"Jour sélectionné : <b>{day} {month}</b>. Choisissez un créneau.","booking.summaryFull":"Rendez-vous sélectionné : <b>{day} {month} · {slot}</b>","booking.cta":"Réservez votre rendez-vous maintenant","cta.title":"Réservez aujourd'hui et commencez la transformation de votre sourire.","cta.subtitle":"Faites le premier pas vers un sourire sain, esthétique et plein de confiance. Nous sommes prêts à vous accueillir.","cta.reserve":"Réserver consultation","cta.whatsapp":"Écrivez-nous sur WhatsApp","footer.tagline":"Nous créons des sourires qui transforment des vies. Dentisterie premium avec chaleur humaine et technologie de pointe.","footer.hours.title":"Horaires","footer.hours.1":"Lun – Ven : 9h00 – 20h00","footer.hours.2":"Samedi : 9h00 – 14h00","footer.hours.3":"Dimanche : Fermé","footer.hours.4":"Urgences : 24/7","footer.contact.title":"Contact","footer.contact.address":"Av. de la Sonrisa 123, 4e étage","footer.contact.city":"Mexico","footer.services.title":"Services","footer.services.1":"Orthodontie","footer.services.2":"Implants dentaires","footer.services.3":"Design du sourire","footer.services.4":"Blanchiment","footer.privacy":"Politique de confidentialité","footer.terms":"Conditions générales","footer.copyright":"Tous droits réservés.","doc.title":"Dentalisima | Excellence en dentisterie esthétique & implants","doc.desc":"Clinique dentaire premium spécialisée en dentisterie esthétique, implants, orthodontie, design du sourire et santé bucco-dentaire intégrale. Technologie avancée et soins personnalisés.","wa.msg":"Bonjour Dentalisima, j'aimerais prendre rendez-vous.","wa.msgBooking":"Bonjour Dentalisima, j'aimerais prendre rendez-vous le {day} {month} à {slot}.","lang.label":"Langue"}};
+  window.MONTHS = {"es":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"en":["January","February","March","April","May","June","July","August","September","October","November","December"],"it":["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"],"de":["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],"fr":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]};
+  window.LANG_LABELS = {"es": "Español", "en": "English", "it": "Italiano", "de": "Deutsch", "fr": "Français"};
+  window.LANG_FLAGS = {"es": "<svg viewBox=\"0 0 24 16\" preserveAspectRatio=\"none\"><rect width=\"24\" height=\"16\" fill=\"#AA151B\"/><rect y=\"4\" width=\"24\" height=\"8\" fill=\"#F1BF00\"/></svg>", "en": "<svg viewBox=\"0 0 60 30\" preserveAspectRatio=\"none\"><clipPath id=\"uk_t\"><path d=\"M30,15 h30 v15 z M30,15 v15 h-30 z M30,15 h-30 v-15 z M30,15 v-15 h30 z\"/></clipPath><rect width=\"60\" height=\"30\" fill=\"#012169\"/><path d=\"M0,0 L60,30 M60,0 L0,30\" stroke=\"#fff\" stroke-width=\"6\"/><path d=\"M0,0 L60,30 M60,0 L0,30\" clip-path=\"url(#uk_t)\" stroke=\"#C8102E\" stroke-width=\"4\"/><path d=\"M30,0 V30 M0,15 H60\" stroke=\"#fff\" stroke-width=\"10\"/><path d=\"M30,0 V30 M0,15 H60\" stroke=\"#C8102E\" stroke-width=\"6\"/></svg>", "it": "<svg viewBox=\"0 0 24 16\" preserveAspectRatio=\"none\"><rect width=\"8\" height=\"16\" fill=\"#008C45\"/><rect x=\"8\" width=\"8\" height=\"16\" fill=\"#F4F5F0\"/><rect x=\"16\" width=\"8\" height=\"16\" fill=\"#CD212A\"/></svg>", "de": "<svg viewBox=\"0 0 24 16\" preserveAspectRatio=\"none\"><rect width=\"24\" height=\"5.33\" fill=\"#000\"/><rect y=\"5.33\" width=\"24\" height=\"5.34\" fill=\"#DD0000\"/><rect y=\"10.67\" width=\"24\" height=\"5.33\" fill=\"#FFCE00\"/></svg>", "fr": "<svg viewBox=\"0 0 24 16\" preserveAspectRatio=\"none\"><rect width=\"8\" height=\"16\" fill=\"#002395\"/><rect x=\"8\" width=\"8\" height=\"16\" fill=\"#fff\"/><rect x=\"16\" width=\"8\" height=\"16\" fill=\"#ED2939\"/></svg>"};
+  window.currentLang = "es";
+
+  (function initI18n(){
+    function detectLang(){
+      try{
+        var saved = localStorage.getItem("dentalisima_lang");
+        if(saved && window.TRANSLATIONS[saved]) return saved;
+      } catch(e){}
+      var b = (navigator.language || "es").slice(0,2).toLowerCase();
+      return window.TRANSLATIONS[b] ? b : "es";
+    }
+
+    function applyTranslations(lang){
+      if(!window.TRANSLATIONS[lang]) return;
+      window.currentLang = lang;
+      document.documentElement.lang = lang;
+      var t = window.TRANSLATIONS[lang];
+
+      document.querySelectorAll("[data-i18n]").forEach(function(el){
+        var key = el.getAttribute("data-i18n");
+        var val = t[key];
+        if(val == null) return;
+        if(val.indexOf("<") >= 0) el.innerHTML = val;
+        else el.textContent = val;
+      });
+
+      if(t["doc.title"]) document.title = t["doc.title"];
+      var md = document.querySelector('meta[name="description"]');
+      if(md && t["doc.desc"]) md.setAttribute("content", t["doc.desc"]);
+
+      if(typeof window.updateCalendarLabel === "function") window.updateCalendarLabel();
+      if(typeof window.renderTestimonials === "function") window.renderTestimonials();
+      if(typeof window.updateWaLinks === "function") window.updateWaLinks();
+      if(typeof window.updateSummary === "function") window.updateSummary();
+
+      updateTrigger(lang);
+
+      try{ localStorage.setItem("dentalisima_lang", lang); } catch(e){}
+    }
+
+    function updateTrigger(lang){
+      var flagEl = document.getElementById("langFlag");
+      var codeEl = document.getElementById("langCode");
+      if(flagEl) flagEl.innerHTML = window.LANG_FLAGS[lang];
+      if(codeEl) codeEl.textContent = lang.toUpperCase();
+      document.querySelectorAll(".lang-menu button").forEach(function(b){
+        b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+      });
+    }
+
+    window.applyTranslations = applyTranslations;
+
+    document.addEventListener("DOMContentLoaded", function(){
+      var trigger = document.getElementById("langTrigger");
+      var switcher = document.getElementById("langSwitcher");
+      var menu = document.getElementById("langMenu");
+      if(!trigger || !switcher) return;
+
+      trigger.addEventListener("click", function(e){
+        e.stopPropagation();
+        var open = switcher.classList.toggle("open");
+        trigger.setAttribute("aria-expanded", open);
+      });
+
+      menu.querySelectorAll("button").forEach(function(b){
+        b.addEventListener("click", function(){
+          applyTranslations(b.getAttribute("data-lang"));
+          switcher.classList.remove("open");
+          trigger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", function(e){
+        if(!switcher.contains(e.target)){
+          switcher.classList.remove("open");
+          trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+          switcher.classList.remove("open");
+          trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Aplicar idioma detectado (después de que el resto del JS haya inicializado)
+      var initLang = detectLang();
+      // Esperar al siguiente tick para que el JS del IIFE ya haya definido las funciones globales
+      setTimeout(function(){ applyTranslations(initLang); }, 0);
+    });
+  })();
+
+  (function () {
+    "use strict";
+
+    /* ----- CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP ----- */
+    var WHATSAPP = "5215555555555"; // [INSERTAR NUMERO DE WHATSAPP] formato internacional sin signos
+    function updateWaLinks(){
+      var t = (window.TRANSLATIONS && window.TRANSLATIONS[window.currentLang]) || {};
+      var msg = t["wa.msg"] || "Hello Dentalisima, I'd like to book an appointment.";
+      var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+      document.querySelectorAll("[data-wa]").forEach(function (el) {
+        el.setAttribute("href", url);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+      });
+    }
+    window.updateWaLinks = updateWaLinks;
+    updateWaLinks();
+
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ---------- Splash ---------- */
+    var splash = document.getElementById("splash");
+    if (splash && !reduce) document.body.classList.add("is-locked");
+    function closeSplash() { if (!splash) return; splash.classList.add("gone"); document.body.classList.remove("is-locked"); }
+    if (splash) {
+      window.setTimeout(closeSplash, reduce ? 0 : 3100);
+
+    }
+
+    /* ---------- Header scrolled ---------- */
+    var header = document.getElementById("header");
+    var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 20); };
+    onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+
+    /* ---------- Menú móvil ---------- */
+    var toggle = document.getElementById("navToggle");
+    var links = document.getElementById("navLinks");
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+      toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    });
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () { links.classList.remove("open"); toggle.setAttribute("aria-expanded", false); });
+    });
+
+    /* ---------- Scroll reveal ---------- */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.14 });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+    /* ---------- Contadores ---------- */
+    var counters = document.querySelectorAll("[data-count]");
+    var cIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || "", dur = 1400, t0 = null;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(eased * target).toLocaleString("es-MX") + suffix;
+          if (p < 1) requestAnimationFrame(step); else el.textContent = target.toLocaleString("es-MX") + suffix;
+        }
+        if (reduce) { el.textContent = target.toLocaleString("es-MX") + suffix; } else { requestAnimationFrame(step); }
+        cIO.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cIO.observe(el); });
+
+    /* ---------- Testimonios ---------- */
+    // Datos base: nombres son universales, q/r se traducen vía claves
+    var TESTI_BASE = [
+      { qKey: "testi.1.q", rKey: "testi.1.r", n: "María Fernanda R.", i: "MF" },
+      { qKey: "testi.2.q", rKey: "testi.2.r", n: "Jorge Salinas", i: "JS" },
+      { qKey: "testi.3.q", rKey: "testi.3.r", n: "Daniela Cruz", i: "DC" },
+      { qKey: "testi.4.q", rKey: "testi.4.r", n: "Andrés Beltrán", i: "AB" }
+    ];
+    var data = TESTI_BASE.map(function(t){ return { q: t.qKey, n: t.n, r: t.rKey, i: t.i, qKey: t.qKey, rKey: t.rKey }; });
+    var track = document.getElementById("testiTrack");
+    var dotsWrap = document.getElementById("testiDots");
+    var idx = 0;
+    var starsSVG = '<span class="testi__stars" aria-label="5 de 5 estrellas">' +
+      Array(5).fill('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>').join("") + '</span>';
+
+    function renderTestimonials(){
+      track.innerHTML = "";
+      dotsWrap.innerHTML = "";
+      var t = window.TRANSLATIONS[window.currentLang] || window.TRANSLATIONS.es;
+      data.forEach(function (item, i) {
+        var s = document.createElement("div");
+        s.className = "testi__slide";
+        s.setAttribute("role", "group");
+        s.setAttribute("aria-label", (i + 1) + " / " + data.length);
+        s.innerHTML = '<div class="testi__card">' + starsSVG +
+          '<p class="testi__quote">“' + (t[item.qKey] || "") + '”</p>' +
+          '<div class="testi__person"><span class="testi__avatar" aria-hidden="true">' + item.i + '</span>' +
+          '<span style="text-align:left"><span class="testi__name">' + item.n + '</span><br><span class="testi__role">' + (t[item.rKey] || "") + '</span></span></div></div>';
+        track.appendChild(s);
+
+        var d = document.createElement("button");
+        d.setAttribute("role", "tab");
+        d.setAttribute("aria-label", "Slide " + (i + 1));
+        d.addEventListener("click", function () { go(i); });
+        dotsWrap.appendChild(d);
+      });
+      go(idx);
+    }
+    window.renderTestimonials = renderTestimonials;
+    renderTestimonials();
+
+    function go(i) {
+      idx = (i + data.length) % data.length;
+      track.style.transform = "translateX(" + (-idx * 100) + "%)";
+      dotsWrap.querySelectorAll("button").forEach(function (b, j) { b.classList.toggle("active", j === idx); });
+    }
+    document.getElementById("testiPrev").addEventListener("click", function () { go(idx - 1); });
+    document.getElementById("testiNext").addEventListener("click", function () { go(idx + 1); });
+    go(0);
+
+    var autoplay;
+    function startAuto() { if (reduce) return; autoplay = window.setInterval(function () { go(idx + 1); }, 6000); }
+    function stopAuto() { window.clearInterval(autoplay); }
+    var testiSection = document.getElementById("testimonios");
+    testiSection.addEventListener("mouseenter", stopAuto);
+    testiSection.addEventListener("mouseleave", startAuto);
+    startAuto();
+
+    /* ---------- Calendario / programador visual ---------- */
+    var DOWS = { es:["L","M","X","J","V","S","D"], en:["M","T","W","T","F","S","S"], it:["L","M","M","G","V","S","D"], de:["M","D","M","D","F","S","S"], fr:["L","M","M","J","V","S","D"] };
+    var now = new Date();
+    var year = now.getFullYear(), month = now.getMonth();
+    function getMonths(){ return (window.MONTHS && window.MONTHS[window.currentLang]) || window.MONTHS.es; }
+    function getDows(){ return DOWS[window.currentLang] || DOWS.es; }
+    function updateCalendarLabel(){
+      var m = getMonths()[month];
+      document.getElementById("calMonth").textContent = m.charAt(0).toUpperCase() + m.slice(1) + " " + year;
+      // Actualizar encabezados de días
+      var dowEls = cal.querySelectorAll(".dow");
+      var dl = getDows();
+      dowEls.forEach(function(el, i){ el.textContent = dl[i]; });
+    }
+    window.updateCalendarLabel = updateCalendarLabel;
+    var meses = getMonths(); // referencia inicial (se actualizará dinámicamente)
+    document.getElementById("calMonth").textContent = meses[month].charAt(0).toUpperCase() + meses[month].slice(1) + " " + year;
+
+    var cal = document.getElementById("cal");
+    getDows().forEach(function (d) { var c = document.createElement("div"); c.className = "dow"; c.textContent = d; cal.appendChild(c); });
+
+    var first = new Date(year, month, 1).getDay(); // 0=Dom
+    var offset = (first + 6) % 7;                   // semana inicia en lunes
+    var daysInMonth = new Date(year, month + 1, 0).getDate();
+    for (var i = 0; i < offset; i++) { var e = document.createElement("div"); e.className = "day empty"; cal.appendChild(e); }
+
+    var selectedDay = null;
+    for (var d = 1; d <= daysInMonth; d++) {
+      var cell = document.createElement("button");
+      cell.type = "button";
+      cell.className = "day";
+      cell.textContent = d;
+      var dateObj = new Date(year, month, d);
+      var dow = dateObj.getDay();
+      var isPast = dateObj < new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      if (isPast || dow === 0) {              // pasado o domingo => no disponible
+        cell.classList.add("muted"); cell.disabled = true;
+      } else {
+        cell.classList.add("free");
+        cell.setAttribute("aria-label", d + " " + getMonths()[month]);
+        (function (cell, d) {
+          cell.addEventListener("click", function () {
+            cal.querySelectorAll(".day.sel").forEach(function (x) { x.classList.remove("sel"); });
+            cell.classList.add("sel");
+            selectedDay = d;
+            updateSummary();
+          });
+        })(cell, d);
+      }
+      cal.appendChild(cell);
+    }
+
+    var selectedSlot = null;
+    document.querySelectorAll("#slots .chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        document.querySelectorAll("#slots .chip.sel").forEach(function (x) { x.classList.remove("sel"); });
+        chip.classList.add("sel");
+        selectedSlot = chip.textContent.trim();
+        updateSummary();
+      });
+    });
+
+    var summary = document.getElementById("summary");
+    var bookBtn = document.getElementById("bookBtn");
+    function updateSummary() {
+      var t = (window.TRANSLATIONS && window.TRANSLATIONS[window.currentLang]) || {};
+      var monthName = getMonths()[month];
+      if (selectedDay && selectedSlot) {
+        var fullTpl = t["booking.summaryFull"] || "<b>{day} {month} · {slot}</b>";
+        summary.innerHTML = fullTpl.replace("{day}", selectedDay).replace("{month}", monthName).replace("{slot}", selectedSlot);
+        var msgTpl = t["wa.msgBooking"] || "Booking: {day} {month} {slot}";
+        var msg = msgTpl.replace("{day}", selectedDay).replace("{month}", monthName).replace("{slot}", selectedSlot);
+        bookBtn.setAttribute("href", "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg));
+      } else if (selectedDay) {
+        var dayTpl = t["booking.summaryDay"] || "<b>{day} {month}</b>";
+        summary.innerHTML = dayTpl.replace("{day}", selectedDay).replace("{month}", monthName);
+      } else {
+        summary.textContent = t["booking.summaryEmpty"] || "Select a day and time.";
+      }
+    }
+    window.updateSummary = updateSummary;
+
+    /* ---------- Año del footer ---------- */
+    document.getElementById("year").textContent = new Date().getFullYear();
+  })();
+  </script>
+</body>
+</html>
